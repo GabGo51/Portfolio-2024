@@ -1,15 +1,30 @@
 import React from "react";
 import "../styles/Projects.css";
 import { useState } from "react";
+import img1 from "../img/alex.png";
+import img2 from "../img/gogosse.png";
 
 const Projects = () => {
-  const [hovered, isHovered] = useState("GOGOSSE");
-  const [picked, isPicked] = useState("");
+  const [hovered, setHovered] = useState("GOGOSSE");
+  const [picked, setPicked] = useState("");
 
   const getClassName = (projectName) => {
     if (picked === projectName) return "project picked";
     if (hovered === projectName) return "project hovered";
     return "project";
+  };
+
+  const handleMouseOver = (projectName) => {
+    setHovered(projectName);
+  };
+
+  const handlePick = (projectName) => {
+    setPicked(projectName);
+  };
+
+  const handleReset = (e) => {
+    e.stopPropagation(); // Prevents the div's onClick from firing
+    setPicked("");
   };
 
   return (
@@ -18,22 +33,38 @@ const Projects = () => {
         <h1>{hovered}</h1>
         <div className="accordion">
           <div
-            onMouseOver={() => isHovered("TATQ")}
-            onClick={() => isPicked("TATQ")}
+            onMouseOver={() => handleMouseOver("TATQ")}
+            onClick={() => handlePick("TATQ")}
             className={getClassName("TATQ")}
-          ></div>
+          >
+            {!picked && <img src={img1} />}
+            {picked && <button onClick={handleReset}>x</button>}
+          </div>
           <div
-            onMouseOver={() => isHovered("GOGOSSE")}
+            onMouseOver={() => handleMouseOver("GOGOSSE")}
+            onClick={() => handlePick("GOGOSSE")}
             className={getClassName("GOGOSSE")}
-          ></div>
+          >
+            {!picked && <img src={img1} />}
+
+            {picked && <button onClick={handleReset}>x</button>}
+          </div>
           <div
-            onMouseOver={() => isHovered("Alexandra Nicolov")}
+            onMouseOver={() => handleMouseOver("Alexandra Nicolov")}
+            onClick={() => handlePick("Alexandra Nicolov")}
             className={getClassName("Alexandra Nicolov")}
-          ></div>
+          >
+            {!picked && <img src={img1} />}
+            {picked && <button onClick={handleReset}>x</button>}
+          </div>
           <div
-            onMouseOver={() => isHovered("WefinanceU")}
+            onMouseOver={() => handleMouseOver("WefinanceU")}
+            onClick={() => handlePick("WefinanceU")}
             className={getClassName("WefinanceU")}
-          ></div>
+          >
+            {!picked && <img src={img1} />}
+            {picked && <button onClick={handleReset}>x</button>}
+          </div>
         </div>
       </div>
     </div>

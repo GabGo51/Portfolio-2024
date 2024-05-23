@@ -16,23 +16,49 @@
 
 
 
+
+
 .project{
+  position: relative;
   cursor: pointer;
   transition: 2s;
-  background-color: rgb(255, 255, 255);
-  height: 70vh;
+  background-color: rgb(255, 255, 255, 0);
+  height: 75vh;
   width: 6%;
   border-radius: 50px;
+  transform-origin: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border: 1px solid white;
+  overflow: hidden;
   
+  img{
+    width: 100%;
+    position: absolute;
+    
+    transition: 2s;
+    
+  }
 }
 
 .hovered{
   transition: 2s;
-  width:82%
+  width:82%;
+
+  img{
+    width: 100%;
+    position: absolute;
+    top: -70px;
+    transition: 2s;
+    
+  }
 }
 
 .picked{
-  transition: 2s;
+  transform-origin: bottom;
+  
+  transition:all 2s, background-color 500ms ;
   position: fixed;
   height: 100vh;
   width: 100%;
@@ -40,6 +66,10 @@
   bottom: 0;
   left:0;
   right: 0;
+  background-color: white;
+  background-image: none;
     
 }
+
+
 

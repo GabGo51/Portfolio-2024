@@ -1,7 +1,18 @@
 import React from "react";
 import "../styles/Projects.css";
 
-const Project = ({ projectNumber, projectName, imgSrc, hovered, picked, handleMouseOver, handlePick, handleReset }) => {
+
+const Project = ({
+  projectNumber,
+  projectName,
+  imgSrc,
+  hovered,
+  picked,
+  handleMouseOver,
+  handlePick,
+  handleReset,
+}) => {
+  
   const getClassName = () => {
     if (picked === projectName) return "project picked";
     if (hovered === projectName) return "project hovered";

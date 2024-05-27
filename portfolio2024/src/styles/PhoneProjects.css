@@ -1,0 +1,56 @@
+.phone-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.phone-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.phone-accordion {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-project {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.phone-project img {
+  width: 120%;
+  object-fit: cover;
+}
+
+.arrow-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  
+}
+
+.arrow-buttons button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding:5px 10px;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}

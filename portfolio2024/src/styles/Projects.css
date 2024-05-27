@@ -11,7 +11,6 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  width: 90vw;
 }
 
 
@@ -29,16 +28,21 @@
   transform-origin: bottom;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   border: 1px solid white;
   overflow: hidden;
-  
-  img{
-    width: 100%;
+
+  p{
     position: absolute;
+    top: -60px;
+    left: 10px;
+    color: white;
     
-    transition: 2s;
-    
+    font-size: 70px;
+  }
+
+  img{
+    opacity: 0;
   }
 }
 
@@ -47,11 +51,7 @@
   width:82%;
 
   img{
-    width: 100%;
-    position: absolute;
-    top: -70px;
-    transition: 2s;
-    
+    opacity: 1;
   }
 }
 
@@ -68,7 +68,15 @@
   right: 0;
   background-color: white;
   background-image: none;
-    
+  z-index: 100;
+}
+
+img{
+  object-fit: contain;
+  width: 80%;
+  transition: 2s;
+  transform: translateY(5%);
+  
 }
 
 

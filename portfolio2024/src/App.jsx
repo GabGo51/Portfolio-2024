@@ -3,13 +3,15 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Projects from "./components/Projects";
 import './styles/App.css'
-
+import PhoneProjects from "./components/PhoneProjects";
+import Cursor from "./Cursor";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="app">
+      <Cursor/>
       <div className="center">
         <div>
           <a href="https://vitejs.dev" target="_blank">
@@ -33,6 +35,7 @@ function App() {
         </p>
       </div>
       <Projects />
+      <PhoneProjects/>
     </div>
   );
 }

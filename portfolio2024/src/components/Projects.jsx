@@ -31,7 +31,7 @@ const Projects = () => {
   return (
     <div className="wrapper">
       <div className="projects">
-        <h1>{hovered}</h1>
+        <h1 >{hovered}</h1>
         <div className="accordion">
           {projects.map((project) => (
             <Project

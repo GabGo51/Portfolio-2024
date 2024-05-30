@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import "../styles/About.css";
-import background from '../img/snowbackground.png'
-import snow from '../img/snow.png'
+import background from "../img/snowbackground2.png";
+import snow from "../img/snow.png";
 
 const About = () => {
   const podRef1 = useRef(null);
@@ -42,7 +42,7 @@ const About = () => {
     const movePods = () => {
       const { x, y } = position;
       const offsetX = (x - window.innerWidth / 2) / 56;
-      const offsetY = ((y - window.innerHeight / 2) / 56);
+      const offsetY = (y - window.innerHeight / 2) / 56;
 
       if (isMouseOnScreen) {
         podElement1.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
@@ -63,8 +63,17 @@ const About = () => {
 
   return (
     <div className="center about">
-      <div className="moving-img" ref={podRef1}><img src={background}/></div>
-      <div className="moving-img2" ref={podRef2}><img src={snow}/></div>
+      <div className="moving-img" >
+        <div className="frame">
+          <div ref={podRef1}>
+            <img src={background}  />
+          </div>
+          
+        </div>
+      </div>
+      <div className="moving-img2" ref={podRef2}>
+        <img src={snow} />
+      </div>
     </div>
   );
 };

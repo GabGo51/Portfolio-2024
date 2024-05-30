@@ -1,5 +1,36 @@
-.snow{
-  width: 30vw; 
+.about{
+  height: auto;
+  height: 160vh;
+}
+
+.moving-img{
+  
+  
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  font-size: 2em;
+  position: absolute;
+  z-index: 30;
+  margin-top: -250px;
   
 }
 
+.moving-img2{
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  font-size: 2em;
+  position: absolute;
+  z-index: 30;
+  margin-top: -250px;
+  
+}

@@ -1,6 +1,6 @@
 .about{
-  height: auto;
-  height: 160vh;
+  
+  
 }
 
 .moving-img{
@@ -14,13 +14,14 @@
   color: black;
   font-weight: bold;
   font-size: 2em;
-  position: absolute;
+  
   z-index: 30;
-  margin-top: -250px;
+  
   
 }
 
 .moving-img2{
+  width: 35%;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -31,6 +32,7 @@
   font-size: 2em;
   position: absolute;
   z-index: 30;
-  margin-top: -250px;
+  margin-top: -40%;
+  margin-left: -20%;
   
 }

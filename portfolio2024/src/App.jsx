@@ -4,6 +4,7 @@ import './styles/App.css'
 import PhoneProjects from "./components/PhoneProjects";
 import Cursor from "./Cursor";
 import About from './components/About'
+import Header from "./components/Header";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="app">
       <Cursor/>
+      <Header/>
       <About/>
       
       <Projects />

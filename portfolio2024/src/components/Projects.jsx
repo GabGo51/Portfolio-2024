@@ -29,7 +29,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="wrapper">
+    <div className="wrapper" id="projects">
       <div className="projects">
         <h1 >{hovered}</h1>
         <div className="accordion">

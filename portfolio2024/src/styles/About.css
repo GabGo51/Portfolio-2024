@@ -1,11 +1,12 @@
 .about{
-  width: 100%;
+  width: 80%;
   
 }
 
 .frame{
   overflow: hidden;
   overflow-x: hidden;
+  
 }
 
 .moving-img{
@@ -29,7 +30,8 @@
 }
 
 .moving-img2{
-  width: 38%;
+  width: 32%;
+  max-width: 670px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -40,7 +42,7 @@
   font-size: 2em;
   position: absolute;
   z-index: 30;
-  margin-top: -50%;
-  margin-left: -20%;
+  margin-top: -34%;
+  margin-left: -22%;
   
 }

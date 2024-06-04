@@ -1,11 +1,14 @@
 .about{
   width: 80%;
-  
+  .snow{
+    width: 75%;
+  }
 }
 
 .frame{
+  width: 90%;
   overflow: hidden;
-  overflow-x: hidden;
+
   
 }
 

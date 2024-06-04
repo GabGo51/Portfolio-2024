@@ -34,11 +34,13 @@
     top: -1vw;
     left: 1vw;
     color: white;
-
     font-size: clamp(40px, 3vw, 70px);
   }
 
   img {
+    object-fit: contain;
+    width: 70%;
+    transition: 2s;
     opacity: 0;
   }
 }
@@ -85,12 +87,7 @@
   }
 }
 
-img {
-  object-fit: contain;
-  width: 80%;
-  transition: 2s;
-  transform: translateY(5%);
-}
+
 
 .info-container {
   width: 100%;

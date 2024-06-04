@@ -1,13 +1,15 @@
 .project-title{
   color: red;
 }
+
+
 .app{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100vw;
-  overflow-x: hidden;
+  
 }
 
 .center{
@@ -16,10 +18,6 @@
   align-items: center;
   justify-content: center;
 }
-
-
-
-
 
 .wrapper{
   position: relative;

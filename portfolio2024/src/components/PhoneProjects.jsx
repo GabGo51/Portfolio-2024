@@ -1,20 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "../styles/PhoneProjects.css";
 import PhoneProject from "./PhoneProject";
 import img1 from "../img/alex.png";
 import img2 from "../img/gogosse.png";
 
-
 const PhoneProjects = () => {
-  
   const [currentProject, setCurrentProject] = useState(0);
+  const projectsContainerRef = useRef(null);
 
   const handleNext = () => {
+    const container = projectsContainerRef.current;
     setCurrentProject((prev) => (prev + 1) % projects.length);
+    container.scrollTo({
+      left: container.offsetWidth * ((currentProject + 1) % projects.length),
+      behavior: "smooth",
+    });
   };
 
   const handlePrevious = () => {
+    const container = projectsContainerRef.current;
     setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
+    container.scrollTo({
+      left: container.offsetWidth * ((currentProject - 1 + projects.length) % projects.length),
+      behavior: "smooth",
+    });
+
+    
   };
 
   const projects = [
@@ -27,14 +38,15 @@ const PhoneProjects = () => {
   return (
     <div className="phone-wrapper">
       <div className="phone-projects">
-        <h1>{projects[currentProject].number}{projects[currentProject].name}</h1>
-        <div className="phone-accordion">
-          <PhoneProject
-            key={projects[currentProject].name}
-            projectNumber={projects[currentProject].number}
-            projectName={projects[currentProject].name}
-            imgSrc={projects[currentProject].img}
-          />
+        <div className="projects-container" ref={projectsContainerRef}>
+          {projects.map((project, index) => (
+            <PhoneProject
+              key={index}
+              projectNumber={project.number}
+              projectName={project.name}
+              imgSrc={project.img}
+            />
+          ))}
         </div>
         <div className="arrow-buttons">
           <button onClick={handlePrevious}>&lt;</button>

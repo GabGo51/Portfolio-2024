@@ -72,7 +72,7 @@ const About = () => {
         </div>
       </div>
       <div className="moving-img2" ref={podRef2}>
-        <img src={snow} />
+        <img className="snow" src={snow} />
       </div>
     </div>
   );

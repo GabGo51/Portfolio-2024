@@ -1,12 +1,19 @@
-.phone-wrapper {
-  position: relative;
+.projects-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Optional: Enable momentum scrolling on iOS */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+}
+.projects-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
 }
 
+.phone-project {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
 .phone-projects {
   display: flex;
   flex-direction: column;
@@ -30,7 +37,8 @@
 }
 
 .phone-project img {
-  width: 120%;
+  width: 80%;
+  
   object-fit: cover;
 }
 

@@ -28,16 +28,17 @@ const Projects = () => {
 
   const projects = projectsData
 
+  
+
   const containerRef = useRef(null)
 
   useGSAP(()=>{
-    const animation = containerRef.current;
-    if(animation){}
     gsap.from(containerRef.current, {
       scrollTrigger:containerRef,
       scale:0.8, 
       y:120, 
       duration:2,
+      delay:0.5,
     }) 
   }, [])
 

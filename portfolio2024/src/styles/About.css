@@ -49,3 +49,16 @@
   margin-left: -22%;
   
 }
+
+@media (max-width:1100px) {
+
+  .frame{
+    width: 100vw;
+  }
+  .moving-img2{
+    width: 50%;
+    margin-top: -54%;
+  margin-left: -40%;
+  }
+  
+}

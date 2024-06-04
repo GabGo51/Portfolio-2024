@@ -1,4 +1,4 @@
-html{
+html {
   width: 100vw;
   overflow-x: hidden;
 }
@@ -7,18 +7,25 @@ html{
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--pearl);
+  background-color:var(--charcoal);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* light mode color */
+  --grey: #dfe0df; 
+  --beige: #e4ddd6; 
+  --green: #4b878a;
+
+  /* Dark mode color */
+  --pearl: #e5e5e5; 
+  --purple: #887caf; 
+  --charcoal: #1d1d1d; 
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-
-

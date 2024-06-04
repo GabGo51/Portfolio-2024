@@ -3,7 +3,7 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 10vh;
-  padding: 0 140px;
+  padding: 0 1vw;
   z-index: 10;
   width: 90%;
 }
@@ -63,6 +63,10 @@ li:hover {
 
   nav.open {
     transform: translateY(0);
+  }
+
+  button{
+    transform: translateX(20%);
   }
 
   ul {

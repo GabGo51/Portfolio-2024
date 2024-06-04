@@ -1,42 +1,68 @@
 import React, { useState, useRef } from "react";
 import "../styles/PhoneProjects.css";
 import PhoneProject from "./PhoneProject";
-import img1 from "../img/alex.png";
-import img2 from "../img/gogosse.png";
+import projectsData from "../data/projects";
+import gsap from 'gsap'
+import  {useGSAP} from '@gsap/react'
 
 const PhoneProjects = () => {
+  const projects = projectsData
   const [currentProject, setCurrentProject] = useState(0);
   const projectsContainerRef = useRef(null);
+  const textRef = useRef(null)
 
   const handleNext = () => {
     const container = projectsContainerRef.current;
-    setCurrentProject((prev) => (prev + 1) % projects.length);
+    const nextProjectIndex = (currentProject + 1) % projects.length;
+    
+    animateTextOut(() => {
+      setCurrentProject(nextProjectIndex);
+      animateTextIn();
+      
+    });
     container.scrollTo({
-      left: container.offsetWidth * ((currentProject + 1) % projects.length),
+      left: container.offsetWidth * nextProjectIndex,
       behavior: "smooth",
     });
   };
-
+  
   const handlePrevious = () => {
     const container = projectsContainerRef.current;
-    setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
-    container.scrollTo({
-      left: container.offsetWidth * ((currentProject - 1 + projects.length) % projects.length),
-      behavior: "smooth",
+    const previousProjectIndex = (currentProject - 1 + projects.length) % projects.length;
+    animateTextOut(() => {
+      setCurrentProject(previousProjectIndex);
+      animateTextIn();
+      container.scrollTo({
+        left: container.offsetWidth * previousProjectIndex,
+        behavior: "smooth",
+      });
     });
-
-    
   };
 
-  const projects = [
-    { number: "01", name: "TATQ", img: img1 },
-    { number: "02", name: "GOGOSSE", img: img2 },
-    { number: "03", name: "Alexandra Nicolov", img: img1 },
-    { number: "04", name: "WefinanceU", img: img2 },
-  ];
+  const animateTextIn = () => {
+    gsap.fromTo(textRef.current, {
+      opacity: 0,
+      y: 20,
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 0.2,
+    });
+  };
+
+  const animateTextOut = (callback) => {
+    gsap.to(textRef.current, {
+      opacity: 0,
+      y: -20,
+      duration: 0.2,
+      onComplete: callback,
+    });
+  };
+
 
   return (
     <div className="phone-wrapper">
+      <h4 ref={textRef}>{projects[currentProject].name} - {projects[currentProject].number}</h4>
       <div className="phone-projects">
         <div className="projects-container" ref={projectsContainerRef}>
           {projects.map((project, index) => (

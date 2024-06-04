@@ -22,7 +22,7 @@
 }
 
 .phone-accordion {
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,8 +37,8 @@
 }
 
 .phone-project img {
-  width: 80%;
-  
+  width: 96%;
+  margin-bottom: 30px;
   object-fit: cover;
 }
 

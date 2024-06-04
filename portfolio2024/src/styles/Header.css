@@ -2,10 +2,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
   height: 10vh;
   padding: 0 140px;
   z-index: 10;
+  width: 90%;
 }
 
 .logo {

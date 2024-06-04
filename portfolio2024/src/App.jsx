@@ -5,9 +5,12 @@ import PhoneProjects from "./components/PhoneProjects";
 import Cursor from "./Cursor";
 import About from './components/About'
 import Header from "./components/Header";
+import useScreenWidth from "./hooks/useScreenWidth";
 
 
 function App() {
+
+  const isDesktop = useScreenWidth()
   
 
   return (
@@ -15,9 +18,8 @@ function App() {
       <Cursor/>
       <Header/>
       <About/>
+      {isDesktop? <Projects /> : <PhoneProjects/>}
       
-      <Projects />
-      <PhoneProjects/>
     </div>
   );
 }

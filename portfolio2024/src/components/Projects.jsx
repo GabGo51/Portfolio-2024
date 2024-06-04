@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "../styles/Projects.css";
 import Project from "./Project";
-import img1 from "../img/alex.png";
-import img2 from "../img/gogosse.png";
+import projectsData from "../data/projects";
+import gsap from 'gsap'
+import  {useGSAP} from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   const [hovered, setHovered] = useState("GOGOSSE");
@@ -14,6 +18,7 @@ const Projects = () => {
 
   const handlePick = (projectName) => {
     setPicked(projectName);
+    setHovered(false)
   };
 
   const handleReset = (e) => {
@@ -21,20 +26,29 @@ const Projects = () => {
     setPicked("");
   };
 
-  const projects = [
-    {number:"01", name: "TATQ", img: img1 },
-    {number:"02", name: "GOGOSSE", img: img2 },
-    {number:"03", name: "Alexandra Nicolov", img: img1 },
-    {number:"04", name: "WefinanceU", img: img2 },
-  ];
+  const projects = projectsData
+
+  const containerRef = useRef(null)
+
+  useGSAP(()=>{
+    const animation = containerRef.current;
+    if(animation){}
+    gsap.from(containerRef.current, {
+      scrollTrigger:containerRef,
+      scale:0.8, 
+      y:120, 
+      duration:2,
+    }) 
+  }, [])
 
   return (
     <div className="wrapper" id="projects">
       <div className="projects">
         <h1 >{hovered}</h1>
-        <div className="accordion">
+        <div className="accordion" ref={containerRef}>
           {projects.map((project) => (
             <Project
+              
               key={project.name}
               projectNumber={project.number}
               projectName={project.name}
@@ -44,6 +58,7 @@ const Projects = () => {
               handleMouseOver={handleMouseOver}
               handlePick={handlePick}
               handleReset={handleReset}
+              
             />
           ))}
         </div>

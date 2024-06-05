@@ -1,11 +1,11 @@
 import { useEffect, useState, useRef } from "react";
-import "../styles/About.css";
-import background from "../img/snowbackground2.png";
-import snow from "../img/snow.png";
+import "./About.css";
+import background from "../../img/snowbackground.png";
+import snow from "../../img/snow.png";
 import gsap from 'gsap'
 import  {useGSAP} from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import useScreenWidth from "../hooks/useScreenWidth";
+import useScreenWidth from "../../hooks/useScreenWidth";
 
 gsap.registerPlugin(ScrollTrigger);
 

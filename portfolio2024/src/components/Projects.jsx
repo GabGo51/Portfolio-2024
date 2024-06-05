@@ -41,8 +41,8 @@ const Projects = () => {
     gsap.from(containerRef.current, {
       scrollTrigger: containerRef,
       scale: 0.8,
-      y: 120,
-      duration: 2,
+      y: 50,
+      duration: 4,
       delay: 0.5,
     });
   }, []);

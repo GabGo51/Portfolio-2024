@@ -3,8 +3,8 @@ import Projects from "./components/Projects";
 import './styles/App.css'
 import PhoneProjects from "./components/PhoneProjects";
 import Cursor from "./Cursor";
-import About from './components/About'
-import Header from "./components/Header";
+import About from './components/About/About'
+import Header from "./components/Header/Header";
 import useScreenWidth from "./hooks/useScreenWidth";
 
 

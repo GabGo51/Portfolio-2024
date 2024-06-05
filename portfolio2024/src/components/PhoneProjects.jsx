@@ -1,15 +1,17 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect,useState, useRef } from "react";
 import "../styles/PhoneProjects.css";
 import PhoneProject from "./PhoneProject";
 import projectsData from "../data/projects";
 import gsap from 'gsap'
-import  {useGSAP} from '@gsap/react'
+
 
 const PhoneProjects = () => {
   const projects = projectsData
   const [currentProject, setCurrentProject] = useState(0);
   const projectsContainerRef = useRef(null);
   const textRef = useRef(null)
+
+  
 
   const handleNext = () => {
     const container = projectsContainerRef.current;
@@ -42,7 +44,7 @@ const PhoneProjects = () => {
   const animateTextIn = () => {
     gsap.fromTo(textRef.current, {
       opacity: 0,
-      y: 20,
+      y: -20,
     }, {
       opacity: 1,
       y: 0,
@@ -53,7 +55,7 @@ const PhoneProjects = () => {
   const animateTextOut = (callback) => {
     gsap.to(textRef.current, {
       opacity: 0,
-      y: -20,
+      y: 20,
       duration: 0.2,
       onComplete: callback,
     });
@@ -62,7 +64,7 @@ const PhoneProjects = () => {
 
   return (
     <div className="phone-wrapper">
-      <h4 ref={textRef}>{projects[currentProject].name} - {projects[currentProject].number}</h4>
+      <h4 ref={textRef}>{projects[currentProject].number} - {projects[currentProject].name} </h4>
       <div className="phone-projects">
         <div className="projects-container" ref={projectsContainerRef}>
           {projects.map((project, index) => (

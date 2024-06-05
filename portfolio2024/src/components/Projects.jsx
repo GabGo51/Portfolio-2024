@@ -2,9 +2,9 @@ import React, { useRef, useState } from "react";
 import "../styles/Projects.css";
 import Project from "./Project";
 import projectsData from "../data/projects";
-import gsap from 'gsap'
-import  {useGSAP} from '@gsap/react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,12 +13,19 @@ const Projects = () => {
   const [picked, setPicked] = useState("");
 
   const handleMouseOver = (projectName) => {
-    setHovered(projectName);
+    if (projectName === hovered) {
+      return;
+    } else {
+      animateTextOut(() => {
+        animateTextIn();
+        setHovered(projectName);
+      });
+    }
   };
 
   const handlePick = (projectName) => {
     setPicked(projectName);
-    setHovered(false)
+    setHovered(false);
   };
 
   const handleReset = (e) => {
@@ -26,30 +33,53 @@ const Projects = () => {
     setPicked("");
   };
 
-  const projects = projectsData
+  const projects = projectsData;
 
-  
+  const containerRef = useRef(null);
 
-  const containerRef = useRef(null)
-
-  useGSAP(()=>{
+  useGSAP(() => {
     gsap.from(containerRef.current, {
-      scrollTrigger:containerRef,
-      scale:0.8, 
-      y:120, 
-      duration:2,
-      delay:0.5,
-    }) 
-  }, [])
+      scrollTrigger: containerRef,
+      scale: 0.8,
+      y: 120,
+      duration: 2,
+      delay: 0.5,
+    });
+  }, []);
+
+  const textRef = useRef(null);
+
+  const animateTextIn = () => {
+    gsap.fromTo(
+      textRef.current,
+      {
+        opacity: 0,
+        y: -20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.2,
+      }
+    );
+  };
+
+  const animateTextOut = (callback) => {
+    gsap.to(textRef.current, {
+      opacity: 0,
+      y: 20,
+      duration: 0.2,
+      onComplete: callback,
+    });
+  };
 
   return (
     <div className="wrapper" id="projects">
       <div className="projects">
-        <h1 >{hovered}</h1>
+        <h1 ref={textRef}>{hovered}</h1>
         <div className="accordion" ref={containerRef}>
           {projects.map((project) => (
             <Project
-              
               key={project.name}
               projectNumber={project.number}
               projectName={project.name}
@@ -59,7 +89,6 @@ const Projects = () => {
               handleMouseOver={handleMouseOver}
               handlePick={handlePick}
               handleReset={handleReset}
-              
             />
           ))}
         </div>

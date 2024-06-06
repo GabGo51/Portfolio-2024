@@ -1,7 +1,10 @@
 import React from "react";
-import "../styles/Projects.css";
+import "./Projects.css";
 import ProjectInfo from "./ProjectInfo";
-import projectsData from "../data/projects";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 const Project = ({
   projectNumber,
@@ -18,7 +21,6 @@ const Project = ({
     if (hovered === projectName) return "project hovered";
     return "project";
   };
-
   
 
   return (

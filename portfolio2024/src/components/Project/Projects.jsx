@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import "../styles/Projects.css";
+import "./Projects.css";
 import Project from "./Project";
-import projectsData from "../data/projects";
+import projectsData from "../../data/projects";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -76,7 +76,8 @@ const Projects = () => {
   return (
     <div className="wrapper" id="projects">
       <div className="projects">
-        <h1 ref={textRef}>{hovered}</h1>
+        {!picked && <h1 ref={textRef}>{hovered}</h1>}
+
         <div className="accordion" ref={containerRef}>
           {projects.map((project) => (
             <Project

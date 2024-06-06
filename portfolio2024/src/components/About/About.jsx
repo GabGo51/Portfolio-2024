@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
-import "./About.css";
-import background from "../../img/snowbackground.png";
+import '../About/About.css';
+import background from "../../img/snowbackground2.png";
 import snow from "../../img/snow.png";
 import gsap from 'gsap'
 import  {useGSAP} from '@gsap/react'

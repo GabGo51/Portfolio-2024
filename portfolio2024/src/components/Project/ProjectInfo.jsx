@@ -1,6 +1,8 @@
 import React from "react";
 
 const ProjectInfo = ({ projectNumber, projectName, imgSrc }) => {
+
+  
   return (
     <div className="info-container">
       <div className="row">
@@ -25,13 +27,19 @@ const ProjectInfo = ({ projectNumber, projectName, imgSrc }) => {
           <img />
         </div>
       </div>
-      <div>
+      <div className="row">
         <div className="red-box">
           <img />
         </div>
-        <div>
+        <div className="text2">
           <h4>TechStack</h4>
-          <p></p>
+          <p>remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.</p>
         </div>
       </div>
     </div>

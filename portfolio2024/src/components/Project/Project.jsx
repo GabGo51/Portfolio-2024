@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
 const Project = ({
   projectNumber,
   projectName,
@@ -21,7 +20,6 @@ const Project = ({
     if (hovered === projectName) return "project hovered";
     return "project";
   };
-  
 
   return (
     <div

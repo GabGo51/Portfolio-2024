@@ -32,15 +32,13 @@ const Project = ({
       )}
       {hovered && <img src={imgSrc} alt={projectName} />}
       {picked && (
-        <>
-          <button onClick={handleReset}>x</button>
-          <ProjectInfo
-            key={projectName}
-            projectNumber={projectNumber}
-            projectName={projectName}
-            imgSrc={imgSrc}
-          />
-        </>
+        <ProjectInfo
+          key={projectName}
+          projectNumber={projectNumber}
+          projectName={projectName}
+          imgSrc={imgSrc}
+          handleReset={handleReset}
+        />
       )}
     </div>
   );

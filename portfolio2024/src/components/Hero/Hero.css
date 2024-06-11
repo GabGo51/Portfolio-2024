@@ -1,0 +1,49 @@
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+
+  button{
+    position: absolute;
+    top: 100px;
+    right: 100px;
+
+  }
+  
+}
+
+.overlay{
+position: absolute;
+inset: 0;
+height: 100%;
+z-index: 2;
+/* sick way of linear gradient have to work with that more*/
+background: linear-gradient(
+  to bottom, 
+  rgba(255, 255, 255, 0.8), 
+  rgba(255, 255, 255, 0.2)47%, 
+  transparent, 
+  transparent 47%, 
+  transparent, 
+  transparent 55%, 
+  rgba(255, 255, 255, 0.2) 50%, 
+  rgba(255, 255, 255, 1) 
+
+);
+}
+
+.slider-container{
+position: relative;
+
+font-size: 20px;
+height: 250px;
+overflow: hidden;
+}
+
+.words{
+  display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}

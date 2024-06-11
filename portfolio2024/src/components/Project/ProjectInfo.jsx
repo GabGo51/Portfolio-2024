@@ -1,8 +1,6 @@
 import React from "react";
 
-const ProjectInfo = ({ projectNumber, projectName, imgSrc }) => {
-
-  
+const ProjectInfo = ({ projectNumber, projectName, imgSrc, handleReset }) => {
   return (
     <div className="info-container">
       <div className="row">
@@ -33,13 +31,18 @@ const ProjectInfo = ({ projectNumber, projectName, imgSrc }) => {
         </div>
         <div className="text2">
           <h4>TechStack</h4>
-          <p>remaining essentially unchanged. It was popularised in the 1960s
+          <p>
+            remaining essentially unchanged. It was popularised in the 1960s
             with the release of Letraset sheets containing Lorem Ipsum passages,
             and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.</p>
+            PageMaker including versions of Lorem Ipsum.remaining essentially
+            
+          </p>
+          <div className="btn-box">
+            <button onClick={handleReset}>View Site</button>
+            <button onClick={handleReset}>GitHub</button>
+            <button onClick={handleReset}>x</button>
+          </div>
         </div>
       </div>
     </div>

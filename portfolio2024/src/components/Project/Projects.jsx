@@ -9,23 +9,23 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
-  const [hovered, setHovered] = useState("GOGOSSE");
+  const [hoveredProject, setHoveredProject] = useState(projectsData[0]);
   const [picked, setPicked] = useState("");
 
-  const handleMouseOver = (projectName) => {
-    if (projectName === hovered) {
+  const handleMouseOver = (project) => {
+    if (project === hoveredProject) {
       return;
     } else {
       animateTextOut(() => {
         animateTextIn();
-        setHovered(projectName);
+        setHoveredProject(project);
       });
     }
   };
 
-  const handlePick = (projectName) => {
-    setPicked(projectName);
-    setHovered(false);
+  const handlePick = (project) => {
+    setPicked(project.name);
+    setHoveredProject(false);
   };
 
   const handleReset = (e) => {
@@ -48,6 +48,7 @@ const Projects = () => {
   }, []);
 
   const textRef = useRef(null);
+  const textRef2 = useRef(null);
 
   const animateTextIn = () => {
     gsap.fromTo(
@@ -59,7 +60,19 @@ const Projects = () => {
       {
         opacity: 1,
         y: 0,
-        duration: 0.2,
+        duration: 0.3,
+      }
+    );
+    gsap.fromTo(
+      textRef2.current,
+      {
+        opacity: 0,
+        y: -20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.3,
       }
     );
   };
@@ -76,7 +89,13 @@ const Projects = () => {
   return (
     <div className="wrapper" id="projects">
       <div className="projects">
-        {!picked && <h1 ref={textRef}>{hovered}</h1>}
+        {!picked && (
+          <div ref={textRef} className="title">
+            <h1 >{hoveredProject.name}</h1>
+            <span>-</span>
+            <h3 >{hoveredProject.type}</h3>
+          </div>
+        )}
 
         <div className="accordion" ref={containerRef}>
           {projects.map((project) => (
@@ -85,11 +104,12 @@ const Projects = () => {
               projectNumber={project.number}
               projectName={project.name}
               imgSrc={project.img}
-              hovered={hovered}
+              hovered={hoveredProject.name}
               picked={picked}
-              handleMouseOver={handleMouseOver}
-              handlePick={handlePick}
+              handleMouseOver={() => handleMouseOver(project)}
+              handlePick={() => handlePick(project)}
               handleReset={handleReset}
+              type={project.type}
             />
           ))}
         </div>

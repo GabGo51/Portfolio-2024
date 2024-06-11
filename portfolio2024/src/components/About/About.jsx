@@ -1,26 +1,23 @@
 import { useEffect, useState, useRef } from "react";
-import '../About/About.css';
+import "../About/About.css";
 import background from "../../img/snowbackground2.png";
 import snow from "../../img/snow.png";
-import gsap from 'gsap'
-import  {useGSAP} from '@gsap/react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useScreenWidth from "../../hooks/useScreenWidth";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  const isDesktop = useScreenWidth();
 
-  const isDesktop = useScreenWidth()
-
-  
   const podRef1 = useRef(null);
   const podRef2 = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isMouseOnScreen, setIsMouseOnScreen] = useState(true);
 
   useEffect(() => {
-
     if (!isDesktop) return;
 
     const handleMouseEnter = () => {
@@ -49,9 +46,8 @@ const About = () => {
   }, []);
 
   useEffect(() => {
-
     if (!isDesktop) return;
-    
+
     const { current: podElement1 } = podRef1;
     const { current: podElement2 } = podRef2;
 
@@ -77,28 +73,33 @@ const About = () => {
     };
   }, [position, isMouseOnScreen]);
 
+  const containerRef = useRef(null);
+  const imgRef = useRef(null);
 
-  const containerRef = useRef(null)
-  const imgRef = useRef(null)
-  
-
-  useGSAP(()=>{
+  useGSAP(() => {
     gsap.from(imgRef.current, {
-      opacity:0.8, 
-      y:-60,
-      x:-60, 
-      duration:2
-    }) 
-  }, [])
+      scrollTrigger: containerRef,
+      opacity: 0.8,
+      y: -60,
+      x: -60,
+      duration: 2,
+    });
+  }, []);
 
   return (
     <div className="center about" ref={containerRef}>
-      <div className="moving-img" >
+      <div className="moving-img">
         <div className="frame">
           <div ref={podRef1}>
-            <img src={background}  />
+            <img src={background} />
           </div>
-          
+          <div className="text-about">
+            <h3>About</h3>
+            <p className="p2">
+              Hi, I'm Gabriel. I'm a fullstack developer. I am the one the real
+              g one the only one the one that take it up upon this street
+            </p>
+          </div>
         </div>
       </div>
       <div className="moving-img2" ref={podRef2}>

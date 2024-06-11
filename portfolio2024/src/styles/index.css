@@ -8,24 +8,67 @@ html {
   font-weight: 400;
   color-scheme: light dark;
   color: var(--pearl);
-  background-color:var(--charcoal);
+  background-color: var(--charcoal);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   /* light mode color */
-  --grey: #dfe0df; 
-  --beige: #e4ddd6; 
+  --grey: #dfe0df;
+  --beige: #e4ddd6;
   --green: #4b878a;
 
   /* Dark mode color */
-  --pearl: #e5e5e5; 
-  --purple: #887caf; 
-  --charcoal: #1d1d1d; 
+  --pearl: #e5e5e5;
+  --purple: #887caf;
+  --charcoal: #1d1d1d;
+}
+
+h1, h2, h3, h4{
+  margin: 40px 0;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: clamp(2rem, 3vw, 3.8rem);
+}
+h2 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+}
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+}
+h4 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+
+.p1 {
+  font-size: clamp(0.5rem, 3vw, 1.5rem);
+}
+.p2 {
+  font-size: clamp(0.5rem, 3vw, 1.2rem);
+}
+.p3 {
+  font-size: clamp(0.8rem, 3vw, 1rem);
+}
+.p4 {
+  font-size: clamp(0.6rem, 3vw, 0.8rem);
+}
+
+button {
+  transition: 500ms;
+  margin: 0 10px;
+  background-color: transparent;
+  border: 1px solid black;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--charcoal);
+
+  &:hover{
+    background-color: var(--charcoal);
+    border: 1px solid var(--pearl);
+    color: var(--pearl);
+  }
 }

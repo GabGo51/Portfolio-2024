@@ -87,7 +87,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="center about" ref={containerRef}>
+    <div className="center about" ref={containerRef} id="about">
       <div className="moving-img">
         <div className="frame">
           <div ref={podRef1}>

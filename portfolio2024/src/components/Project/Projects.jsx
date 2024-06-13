@@ -88,11 +88,14 @@ const Projects = () => {
 
   return (
     <div className="wrapper" id="projects">
+      
       <div className="projects">
+      <h2>Selected work</h2>
         {!picked && (
           <div ref={textRef} className="title">
+            
             <h1 >{hoveredProject.name}</h1>
-            <span>-</span>
+            <span>&#183;</span>
             <h3 >{hoveredProject.type}</h3>
           </div>
         )}

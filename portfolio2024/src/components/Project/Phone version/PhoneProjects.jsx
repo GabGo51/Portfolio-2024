@@ -63,7 +63,7 @@ const PhoneProjects = () => {
   };
 
   return (
-    <div className="phone-wrapper">
+    <div className="phone-wrapper" id="projects">
       <h4 ref={textRef}>
         {projects[currentProject].number} - {projects[currentProject].name}{" "}
       </h4>

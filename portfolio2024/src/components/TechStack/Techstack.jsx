@@ -2,12 +2,27 @@ import React from "react";
 import "./Techstack.css";
 
 const techItemsDevelopment = [
-  "React", "Javascript", "HTML", "CSS", "Styled-Components", "Tailwind", "Framer-Motion", 
-  "GSAP", "Node.js", "MongoDB", "Git", "Vercel"
+  "React",
+  "Javascript",
+  "HTML",
+  "CSS",
+  "Styled-Components",
+  "Tailwind",
+  "Framer-Motion",
+  "GSAP",
+  "Node.js",
+  "MongoDB",
+  "Git",
+  "Vercel",
 ];
 
 const techItemsDesign = [
-  "Figma", "Webflow", "Photoshop", "Krita", "SquareSpace", "Canva"
+  "Figma",
+  "Webflow",
+  "Photoshop",
+  "Krita",
+  "SquareSpace",
+  "Canva",
 ];
 
 const Techstack = () => {
@@ -20,7 +35,9 @@ const Techstack = () => {
           {techItemsDevelopment.map((item, index) => (
             <React.Fragment key={index}>
               <p style={{ animationDelay: `${index * 0.4}s` }}>{item}</p>
-              {index < techItemsDevelopment.length - 1 && <p style={{ animationDelay: `${index * 0.1}s` }}>&#183;</p>}
+              {index < techItemsDevelopment.length - 1 && (
+                <p style={{ animationDelay: `${index * 0.1}s` }}>&#183;</p>
+              )}
             </React.Fragment>
           ))}
         </div>
@@ -31,7 +48,9 @@ const Techstack = () => {
           {techItemsDesign.map((item, index) => (
             <React.Fragment key={index}>
               <p style={{ animationDelay: `${index * 0.1}s` }}>{item}</p>
-              {index < techItemsDesign.length - 1 && <p style={{ animationDelay: `${index * 0.1}s` }}>&#183;</p>}
+              {index < techItemsDesign.length - 1 && (
+                <p style={{ animationDelay: `${index * 0.1}s` }}>&#183;</p>
+              )}
             </React.Fragment>
           ))}
         </div>

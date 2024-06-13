@@ -99,14 +99,23 @@ const About = () => {
           <div className="text-about">
             <h3>About</h3>
             <p className="p2">
-              Hi, I'm Gabriel. I'm a fullstack developer. I am the one the real
-              g one the only one the one that take it up upon this street
+              Hi, I'm Gab, a fearless little fella who loves to create stuff
+              both offline and online. I aim to design simply while bringing my
+              creations to life.
+            </p>
+
+            <p className="p3">
+              {" "}
+              "Dont overthink it, just focus on the landing"
             </p>
             <div className="icon-container">
               <a target="blank_" href="https://github.com/GabGo51">
                 <img src={Git} alt="icon" className="icon" />
               </a>
-              <a target="blank_" href="https://www.linkedin.com/in/gabriel-gosselin/">
+              <a
+                target="blank_"
+                href="https://www.linkedin.com/in/gabriel-gosselin/"
+              >
                 <img src={Linkedin} alt="icon" className="icon" />
               </a>
             </div>

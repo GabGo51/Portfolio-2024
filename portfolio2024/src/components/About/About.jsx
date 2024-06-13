@@ -6,6 +6,9 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useScreenWidth from "../../hooks/useScreenWidth";
+import Linkedin from "../../img/Linkedin.png";
+import Git from "../../img/Git.png";
+import "../../styles/App.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -99,6 +102,14 @@ const About = () => {
               Hi, I'm Gabriel. I'm a fullstack developer. I am the one the real
               g one the only one the one that take it up upon this street
             </p>
+            <div className="icon-container">
+              <a target="blank_" href="https://github.com/GabGo51">
+                <img src={Git} alt="icon" className="icon" />
+              </a>
+              <a target="blank_" href="https://www.linkedin.com/in/gabriel-gosselin/">
+                <img src={Linkedin} alt="icon" className="icon" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

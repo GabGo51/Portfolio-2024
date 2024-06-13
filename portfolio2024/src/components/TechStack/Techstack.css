@@ -1,0 +1,23 @@
+.techstack {
+ width: 90vw;
+}
+
+.tech-items {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 3vw;
+}
+
+.tech-items p {
+  margin: 10px 5px;
+  animation: wave 6s infinite;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

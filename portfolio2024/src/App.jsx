@@ -7,6 +7,7 @@ import About from './components/About/About'
 import Header from "./components/Header/Header";
 import useScreenWidth from "./hooks/useScreenWidth";
 import Hero from "./components/Hero/Hero";
+import Techstack from "./components/TechStack/Techstack";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Header/>
       <Hero/>
       <About/>
+      <Techstack/>
       {isDesktop? <Projects /> : <PhoneProjects/>}
       
     </div>

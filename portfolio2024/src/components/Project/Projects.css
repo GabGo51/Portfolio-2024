@@ -77,7 +77,7 @@
   height: 85vh;
   width: 100%;
   transform: translateY(5%);
-  background-color: white;
+  background-color: var(--pearl);
   background-image: none;
   z-index: 100;
   display: flex;

@@ -10,6 +10,7 @@ import Hero from "./components/Hero/Hero";
 import Techstack from "./components/TechStack/Techstack";
 
 
+
 function App() {
 
   const isDesktop = useScreenWidth()
@@ -23,6 +24,7 @@ function App() {
       <Hero/>
       <About/>
       <Techstack/>
+      
       {isDesktop? <Projects /> : <PhoneProjects/>}
       
     </div>

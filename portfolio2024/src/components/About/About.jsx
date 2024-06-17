@@ -56,8 +56,8 @@ const About = () => {
 
     const movePods = () => {
       const { x, y } = position;
-      const offsetX = (x - window.innerWidth / 2) / 56;
-      const offsetY = (y - window.innerHeight / 2) / 56;
+      const offsetX = (x - window.innerWidth / 2) / 40;
+      const offsetY = (y - window.innerHeight / 2) / 40;
 
       if (isMouseOnScreen) {
         podElement1.style.transform = `translate(${offsetX}px, ${offsetY}px)`;

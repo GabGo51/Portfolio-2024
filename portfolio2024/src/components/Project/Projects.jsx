@@ -13,6 +13,9 @@ const Projects = () => {
   const [picked, setPicked] = useState("");
 
   const handleMouseOver = (project) => {
+    if (picked) {
+      return;
+    }
     if (project === hoveredProject) {
       return;
     } else {
@@ -30,7 +33,7 @@ const Projects = () => {
 
   const handleReset = (e) => {
     e.stopPropagation(); // Prevents the div's onClick from firing
-    setPicked("");
+    setPicked(false);
   };
 
   const projects = projectsData;
@@ -42,29 +45,18 @@ const Projects = () => {
       scrollTrigger: containerRef,
       scale: 0.8,
       y: 50,
-      duration: 4,
+      duration: 1,
       delay: 0.5,
+      
     });
   }, []);
 
   const textRef = useRef(null);
-  const textRef2 = useRef(null);
 
   const animateTextIn = () => {
+    const children = textRef.current.children;
     gsap.fromTo(
-      textRef.current,
-      {
-        opacity: 0,
-        y: -20,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.3,
-      }
-    );
-    gsap.fromTo(
-      textRef2.current,
+      children,
       {
         opacity: 0,
         y: -20,
@@ -78,25 +70,25 @@ const Projects = () => {
   };
 
   const animateTextOut = (callback) => {
-    gsap.to(textRef.current, {
+    const children = textRef.current.children;
+    gsap.to(children, {
       opacity: 0,
       y: 20,
       duration: 0.2,
+      stagger: 0.05, // Stagger start times by 0.1 seconds
       onComplete: callback,
     });
   };
 
   return (
     <div className="wrapper" id="projects">
-      
       <div className="projects">
-      <h2>Selected work</h2>
+        <h2>Selected work</h2>
         {!picked && (
           <div ref={textRef} className="title">
-            
-            <h1 >{hoveredProject.name}</h1>
+            <h3>{hoveredProject.name}</h3>
             <span>&#183;</span>
-            <h3 >{hoveredProject.type}</h3>
+            <h4>{hoveredProject.type}</h4>
           </div>
         )}
 

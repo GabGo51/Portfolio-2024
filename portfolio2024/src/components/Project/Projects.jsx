@@ -9,8 +9,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
-  const [hoveredProject, setHoveredProject] = useState(projectsData[0]);
-  const [picked, setPicked] = useState("");
+  const [hoveredProject, setHoveredProject] = useState(projectsData[1]);
+  const [picked, setPicked] = useState(false);
 
   const handleMouseOver = (project) => {
     if (picked) {
@@ -34,6 +34,7 @@ const Projects = () => {
   const handleReset = (e) => {
     e.stopPropagation(); // Prevents the div's onClick from firing
     setPicked(false);
+    setHoveredProject(projectsData[1])
   };
 
   const projects = projectsData;
@@ -41,6 +42,11 @@ const Projects = () => {
   const containerRef = useRef(null);
 
   useGSAP(() => {
+    gsap.to(".accordion > *", {
+      scrollTrigger: containerRef,
+      height:"75vh", 
+      stagger:0.2, 
+    });
     gsap.from(containerRef.current, {
       scrollTrigger: containerRef,
       scale: 0.8,
@@ -49,6 +55,7 @@ const Projects = () => {
       delay: 0.5,
       
     });
+    
   }, []);
 
   const textRef = useRef(null);

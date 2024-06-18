@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: start;
   width: 90vw;
-  margin-bottom: 200px;
+  margin-bottom: 800px;
   margin-top: 2vw;
 }
 
@@ -23,7 +23,7 @@
 
 .accordion {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   gap: 20px;
   width: 100%;
@@ -34,7 +34,7 @@
   cursor: pointer;
   transition: 2s;
   background-color: rgb(255, 255, 255, 0);
-  height: 75vh;
+  height: 5vh;
   width: 6%;
   border-radius: 50px;
   transform-origin: bottom;
@@ -50,6 +50,7 @@
     left: 1vw;
     color: white;
     font-size: clamp(40px, 3vw, 70px);
+    
   }
 
   img {
@@ -74,9 +75,9 @@
   transform-origin: bottom;
   transition: all 2s, background-color 500ms;
   position: fixed;
-  height: 85vh;
+  height: 85vh !important;
   width: 100%;
-  transform: translateY(5%);
+  
   background-color: var(--pearl);
   background-image: none;
   z-index: 100;

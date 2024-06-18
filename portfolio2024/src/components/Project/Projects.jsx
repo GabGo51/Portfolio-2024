@@ -34,7 +34,7 @@ const Projects = () => {
   const handleReset = (e) => {
     e.stopPropagation(); // Prevents the div's onClick from firing
     setPicked(false);
-    setHoveredProject(projectsData[1])
+    setHoveredProject(projectsData[3]);
   };
 
   const projects = projectsData;
@@ -42,20 +42,31 @@ const Projects = () => {
   const containerRef = useRef(null);
 
   useGSAP(() => {
-    gsap.to(".accordion > *", {
-      scrollTrigger: containerRef,
-      height:"75vh", 
-      stagger:0.2, 
-    });
+    // Animation for the container itself
     gsap.from(containerRef.current, {
-      scrollTrigger: containerRef,
-      scale: 0.8,
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top bottom", // Animation starts when top of container hits bottom of viewport
+        end: "bottom top", // Animation ends when bottom of container hits top of viewport
+        toggleActions: "play none none reverse", // Defines when animation plays and reverses
+      },
+      opacity: 0,
       y: 50,
       duration: 1,
       delay: 0.5,
-      
     });
-    
+
+    // Animation for items inside the container (assuming ".accordion > *" are the items)
+    gsap.to(".accordion > *", {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        toggleActions: "play none none reverse",
+      },
+      height: "75vh",
+      stagger: 0.2,
+    });
   }, []);
 
   const textRef = useRef(null);

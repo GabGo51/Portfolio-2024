@@ -5,8 +5,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+import icon1 from "../../img/code.png";
+import icon2 from "../../img/brush.png";
+
 const techItemsDevelopment = [
   "React",
+  "Vite",
   "Javascript",
   "HTML",
   "CSS",
@@ -32,8 +36,7 @@ const techItemsDesign = [
 const Techstack = () => {
   const containerRef = useRef(null);
   const headerRef = useRef(null);
-  const subheaderRef = useRef(null);
-  const subheaderRef2 = useRef(null);
+  
 
   useGSAP(() => {
     const t1 = gsap.timeline({
@@ -63,15 +66,22 @@ const Techstack = () => {
       duration: 0.5,
       delay: 2,
     })
-      .from(subheaderRef.current, {
-        opacity: 0,
-        y: 20,
+    .from(".flex-h > *", {
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      stagger: 0.3,
+    })
+      .to('.tech-hr', {
+        opacity: 1,
+        width: '20%',
         duration: 0.5,
       })
-      .from(subheaderRef2.current, {
-        opacity: 0,
-        y: 20,
-        duration: 0.5,
+      .to('.tech-icon', {
+        marginLeft:"auto",
+        duration:2, 
+        delay:0.2, 
+        
       });
 
     t2.from(gsap.utils.toArray(".tech-items p"), {
@@ -88,11 +98,17 @@ const Techstack = () => {
       <h2 ref={headerRef} className="tech-title">
         A Diversified Toolbox
       </h2>
+
       <div className="techstack" ref={containerRef}>
         <Toolbox />
 
         <div>
-          <h3 ref={subheaderRef}>Development</h3>
+          <div  className="flex-h">
+            <h3 className="tech-subtitle">Development</h3>
+            <img src={icon1} alt="icon" className="tech-icon" />
+          </div>
+          <hr className="tech-hr"></hr>
+
           <div className="tech-items">
             {techItemsDevelopment.map((item, index) => (
               <React.Fragment key={index}>
@@ -105,7 +121,12 @@ const Techstack = () => {
           </div>
         </div>
         <div>
-          <h3 ref={subheaderRef2}>Design</h3>
+          <div  className="flex-h">
+            <h3 className="tech-subtitle">Design</h3>
+            <img src={icon2} alt="icon" className="tech-icon" />
+          </div>
+          <hr className="tech-hr"></hr>
+
           <div className="tech-items">
             {techItemsDesign.map((item, index) => (
               <React.Fragment key={index}>

@@ -1,23 +1,42 @@
-h2{
+h2 {
   width: 90vw;
   text-align: left;
+  transform: translateY(-20px);
+}
+
+
+
+.tech-subtitle {
+  margin-right: 30px;
 }
 
 .techstack {
   width: 84vw;
-  
+
   position: relative;
 }
 
 .tech-items {
   display: flex;
   flex-wrap: wrap;
-  font-size: clamp(20px, 5vw, 68px);
+  font-size: clamp(20px, 3.4vw, 100px);
 }
 
 .tech-items p {
   margin: 10px 5px;
   animation: wave 6s infinite;
+}
+
+.tech-icon {
+  width: 50px;
+}
+
+hr {
+  opacity: 0;
+  width: 0px;
+  margin: 0 3px;
+  transform: translateY(-24px);
+
 }
 
 @keyframes wave {

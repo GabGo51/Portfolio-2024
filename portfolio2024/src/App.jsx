@@ -8,16 +8,24 @@ import Header from "./components/Header/Header";
 import useScreenWidth from "./hooks/useScreenWidth";
 import Hero from "./components/Hero/Hero";
 import Techstack from "./components/TechStack/Techstack";
+import { ReactLenis, useLenis } from 'lenis/react'
+
+//lenis is simple and fucking goated 
 
 
 
 function App() {
 
   const isDesktop = useScreenWidth()
+
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  })
   
 
   return (
     <div className="app">
+      <ReactLenis root>
       <Cursor/>
 
       <Header/>
@@ -26,7 +34,7 @@ function App() {
       <Techstack/>
       
       {isDesktop? <Projects /> : <PhoneProjects/>}
-      
+      </ReactLenis>
     </div>
   );
 }

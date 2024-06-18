@@ -25,6 +25,12 @@ html {
   --charcoal: #1d1d1d;
 }
 
+.flex-h{
+  display: flex;
+  align-items: center;
+  
+}
+
 h1, h2, h3, h4{
   margin: 40px 0;
 }

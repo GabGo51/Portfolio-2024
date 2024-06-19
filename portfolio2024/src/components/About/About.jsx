@@ -78,21 +78,36 @@ const About = () => {
 
   const containerRef = useRef(null);
   const imgRef = useRef(null);
+  const frameRef = useRef(null)
 
   useGSAP(() => {
     gsap.from(imgRef.current, {
       scrollTrigger: containerRef,
       opacity: 0.8,
-      y: -60,
-      x: -60,
+      y: -30,
+      x: -30,
       duration: 2,
+    });
+    gsap.from(frameRef.current, {
+      scrollTrigger: containerRef,
+      width:"55vw",
+      duration: 2,
+    });
+
+    gsap.from(".text-about > *", {
+      scrollTrigger: containerRef,
+      opacity:0,
+      y:50,
+      duration: 1,
+      delay:1, 
+      stagger:0.2,
     });
   }, []);
 
   return (
     <div className="center about" ref={containerRef} id="about">
       <div className="moving-img">
-        <div className="frame">
+        <div className="frame" ref={frameRef}>
           <div ref={podRef1}>
             <img src={background} />
           </div>

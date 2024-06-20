@@ -60,11 +60,16 @@ const Techstack = () => {
       },
     });
 
-    t1.from(headerRef.current, {
+    t1.to("html", {
+      background:"black", 
+      color:"white", 
+      duration:3,
+    })
+    .from(headerRef.current, {
       opacity: 0,
       y: 20,
       duration: 0.5,
-      delay: 2,
+      
     })
     .from(".flex-h > *", {
       opacity: 0,
@@ -89,7 +94,7 @@ const Techstack = () => {
       y: 20,
       duration: 0.5,
       stagger: 0.05,
-      delay: 3,
+      delay: 4,
     });
   }, []);
 

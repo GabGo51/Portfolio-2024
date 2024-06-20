@@ -57,6 +57,19 @@ const Projects = () => {
     });
 
     // Animation for items inside the container (assuming ".accordion > *" are the items)
+
+    gsap.to("html", {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "center center",
+        end: "bottom top",
+        
+      },
+      background:"grey",
+      duration:2, 
+
+
+    });
     gsap.to(".accordion > *", {
       scrollTrigger: {
         trigger: containerRef.current,

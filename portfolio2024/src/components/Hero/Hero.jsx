@@ -24,7 +24,7 @@ const Hero = () => {
   
 
   return (
-    <div className="hero">
+    <div className="hero section">
       <div ref={comp} className="slider-container">
         <div className="overlay"></div>
         <div id="words" className="words">

@@ -60,12 +60,7 @@ const Techstack = () => {
       },
     });
 
-    t1.to("html", {
-      background:"black", 
-      color:"white", 
-      duration:3,
-    })
-    .from(headerRef.current, {
+    t1.from(headerRef.current, {
       opacity: 0,
       y: 20,
       duration: 0.5,
@@ -104,7 +99,7 @@ const Techstack = () => {
         A Diversified Toolbox
       </h2>
 
-      <div className="techstack" ref={containerRef}>
+      <div className="techstack section" ref={containerRef}>
         <Toolbox />
 
         <div>

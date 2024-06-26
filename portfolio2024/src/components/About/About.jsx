@@ -105,7 +105,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="center about" ref={containerRef} id="about">
+    <div className="center about section" ref={containerRef} id="about">
       <div className="moving-img">
         <div className="frame" ref={frameRef}>
           <div ref={podRef1}>

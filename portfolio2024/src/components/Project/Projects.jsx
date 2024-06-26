@@ -56,20 +56,9 @@ const Projects = () => {
       delay: 0.5,
     });
 
-    // Animation for items inside the container (assuming ".accordion > *" are the items)
+   
 
-    gsap.to("html", {
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "center center",
-        end: "bottom top",
-        
-      },
-      background:"grey",
-      duration:2, 
-
-
-    });
+   
     gsap.to(".accordion > *", {
       scrollTrigger: {
         trigger: containerRef.current,
@@ -112,7 +101,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="wrapper" id="projects">
+    <div className="wrapper section" id="projects">
       <div className="projects">
         <h2>Selected work</h2>
         {!picked && (

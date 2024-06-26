@@ -1,5 +1,6 @@
 .about {
   width: 80%;
+  margin-bottom: 5vw;
   .snow {
     width: 75%;
   }
@@ -22,22 +23,19 @@
   align-items: end;
   flex-direction: column;
   color: rgb(0, 0, 0);
-
-  
 }
 
-.icon-container{
+.icon-container {
   display: flex;
   justify-content: space-between;
-  width: 60px;
+  width: clamp(30px, 30%, 50px);
 
   .icon {
     transition: 400ms;
-    width: 30px;
+    width: clamp(20px, 90%, 30px);
     border-radius: 4px;
   }
 }
-
 
 .moving-img {
   display: flex;
@@ -80,11 +78,29 @@
   .frame {
     width: 100vw;
   }
+  .moving-img {
+    width: 100vw;
+  }
   .moving-img2 {
     width: 50%;
     margin-top: -54%;
     margin-left: -40%;
   }
+
+  .text-about {
+    top: 50px;
+    right: 20px;
+    /* From https://css.glass */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16.7px);
+    -webkit-backdrop-filter: blur(16.7px);
+    padding: 10px;
+
+    h3 {
+      margin: 0;
+    }
+  }
 }
-
-

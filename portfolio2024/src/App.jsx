@@ -32,16 +32,18 @@ function App() {
     sections.forEach((section, index) => {
       ScrollTrigger.create({
         trigger: section,
-        start: 'top center', 
+        start: 'top center',
         end: 'bottom center',
-        onEnter: () => changeBackgroundColor(index),
-        onLeaveBack: () => changeBackgroundColor(index - 1),
+        onEnter: () => changeStyles(index),
+        onLeaveBack: () => changeStyles(index - 1),
       });
     });
 
-    const changeBackgroundColor = (index) => {
-      const colors = ['#e5e5e5','#e5e5e5', '#1d1d1d', '#aaaaaa']; // Define your colors here
-      document.documentElement.style.backgroundColor = colors[index] || '#ffffff';
+    const changeStyles = (index) => {
+      const backgroundColors = ['#e5e5e5', '#e5e5e5', '#1d1d1d', '#9f9f9f']; // Define your background colors here
+      const fontColors = ['#000000', '#000000', '#ffffff', '#ffffff']; // Define your font colors here
+      document.documentElement.style.backgroundColor = backgroundColors[index] || '#ffffff';
+      document.documentElement.style.color = fontColors[index] || '#000000';
     };
   }, []);
   

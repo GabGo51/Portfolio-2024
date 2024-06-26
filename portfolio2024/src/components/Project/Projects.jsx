@@ -40,6 +40,7 @@ const Projects = () => {
   const projects = projectsData;
 
   const containerRef = useRef(null);
+  
 
   useGSAP(() => {
     // Animation for the container itself
@@ -55,16 +56,13 @@ const Projects = () => {
       duration: 1,
       delay: 0.5,
     });
-
-   
-
-   
     gsap.to(".accordion > *", {
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top bottom",
-        end: "bottom top",
+        start: "center center",
+        end: "center center",
         toggleActions: "play none none reverse",
+        markers: true, // Debug markers (optional)
       },
       height: "75vh",
       stagger: 0.2,

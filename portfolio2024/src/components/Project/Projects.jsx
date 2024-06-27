@@ -59,8 +59,8 @@ const Projects = () => {
     gsap.to(".accordion > *", {
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "center center",
-        end: "center center",
+        start: "center 20% center",
+        end: "center 20% center",
         toggleActions: "play none none reverse",
         markers: true, // Debug markers (optional)
       },

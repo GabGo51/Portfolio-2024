@@ -90,7 +90,7 @@ const About = () => {
     });
     gsap.from(frameRef.current, {
       scrollTrigger: containerRef,
-      width:"55vw",
+      width:"55%",
       duration: 2,
     });
 

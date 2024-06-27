@@ -88,9 +88,9 @@ const About = () => {
       x: -30,
       duration: 2,
     });
-    gsap.from(frameRef.current, {
+    gsap.to(frameRef.current, {
       scrollTrigger: containerRef,
-      width:"55%",
+      width:"90%",
       duration: 2,
     });
 

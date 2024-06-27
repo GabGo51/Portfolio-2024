@@ -12,6 +12,7 @@ import { ReactLenis, useLenis } from 'lenis/react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Contact from "./components/Contact/Contact";
 
 //lenis is simple and fucking goated 
 
@@ -40,7 +41,7 @@ function App() {
     });
 
     const changeStyles = (index) => {
-      const backgroundColors = ['#e5e5e5', '#e5e5e5', '#1d1d1d', '#9f9f9f']; // Define your background colors here
+      const backgroundColors = ['#e5e5e5', '#e5e5e5', '#1d1d1d', '#878787']; // Define your background colors here
       const fontColors = ['#000000', '#000000', '#ffffff', '#ffffff']; // Define your font colors here
       document.documentElement.style.backgroundColor = backgroundColors[index] || '#ffffff';
       document.documentElement.style.color = fontColors[index] || '#000000';
@@ -59,6 +60,7 @@ function App() {
       <Techstack/>
       
       {isDesktop? <Projects /> : <PhoneProjects/>}
+      <Contact/>
       </ReactLenis>
     </div>
   );

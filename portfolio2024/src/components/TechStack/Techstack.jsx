@@ -89,7 +89,7 @@ const Techstack = () => {
       y: 20,
       duration: 0.5,
       stagger: 0.05,
-      delay: 4,
+      delay: 2,
     });
   }, []);
 

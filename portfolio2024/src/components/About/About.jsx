@@ -82,20 +82,38 @@ const About = () => {
 
   useGSAP(() => {
     gsap.from(imgRef.current, {
-      scrollTrigger: containerRef,
-      opacity: 0.8,
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top-=100 center",
+        
+        
+        markers: true, // Debug markers (optional)
+      },
+      opacity: 0.5,
       y: -30,
       x: -30,
       duration: 2,
     });
     gsap.to(frameRef.current, {
-      scrollTrigger: containerRef,
-      width:"90%",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top-=100 center",
+        
+        
+        markers: true, // Debug markers (optional)
+      },
+      scale:0.8,
       duration: 2,
     });
 
     gsap.from(".text-about > *", {
-      scrollTrigger: containerRef,
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top center",
+        
+        
+        markers: true, // Debug markers (optional)
+      },
       opacity:0,
       y:50,
       duration: 1,

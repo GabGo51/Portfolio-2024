@@ -33,10 +33,11 @@ function App() {
     sections.forEach((section, index) => {
       ScrollTrigger.create({
         trigger: section,
-        start: 'center center',
-        end: 'center center',
+        start: 'top center',
+        
         onEnter: () => changeStyles(index),
         onLeaveBack: () => changeStyles(index - 1),
+        markers:true
       });
     });
 

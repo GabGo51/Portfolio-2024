@@ -20,8 +20,8 @@ const Projects = () => {
       return;
     } else {
       animateTextOut(() => {
-        animateTextIn();
         setHoveredProject(project);
+        animateTextIn();
       });
     }
   };
@@ -40,27 +40,15 @@ const Projects = () => {
   const projects = projectsData;
 
   const containerRef = useRef(null);
-  
 
   useGSAP(() => {
     // Animation for the container itself
-    gsap.from(containerRef.current, {
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top bottom", // Animation starts when top of container hits bottom of viewport
-        end: "bottom top", // Animation ends when bottom of container hits top of viewport
-        toggleActions: "play none none reverse", // Defines when animation plays and reverses
-      },
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      delay: 0.5,
-    });
+    
     gsap.to(".accordion > *", {
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "center 20% center",
-        end: "center 20% center",
+        start: "top center",
+        end: "top center",
         toggleActions: "play none none reverse",
         markers: true, // Debug markers (optional)
       },
@@ -99,7 +87,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="wrapper section" id="projects">
+    <div className="wrapper section" id="projects" ref={containerRef}>
       <div className="projects">
         <h2>Selected work</h2>
         {!picked && (
@@ -110,7 +98,7 @@ const Projects = () => {
           </div>
         )}
 
-        <div className="accordion" ref={containerRef}>
+        <div className="accordion" >
           {projects.map((project) => (
             <Project
               key={project.name}

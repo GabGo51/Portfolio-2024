@@ -1,5 +1,5 @@
 html {
-  transition:  2s ease;
+  transition: 2s ease;
   width: 100vw;
   overflow-x: hidden;
 }
@@ -7,7 +7,7 @@ html {
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
-  color-scheme: light dark;
+
   color: var(--charcoal);
   background-color: var(--pearl);
   font-synthesis: none;
@@ -25,17 +25,20 @@ html {
   --purple: #887caf;
   --charcoal: #1d1d1d;
 
-  --test:#aaaaaa;
+  --test: #aaaaaa;
 }
 
-.flex-h{
+.flex-h {
   display: flex;
   align-items: center;
-  
 }
 
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
   margin: 40px 0;
+  font-family: Bricolage Grotesque;
 }
 
 h1 {
@@ -51,17 +54,23 @@ h4 {
   font-size: clamp(1.4rem, 3vw, 1.9rem);
 }
 
+
+
 .p1 {
-  font-size: clamp(0.5rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 1.9rem);
+  
 }
 .p2 {
-  font-size: clamp(0.5rem, 3vw, 1.2rem);
+  font-size: clamp(0.7rem, 3vw, 1.7rem);
+  
 }
 .p3 {
-  font-size: clamp(0.8rem, 3vw, 1rem);
+  font-size: clamp(0.5rem, 3vw, 1.5rem);
+  
 }
 .p4 {
-  font-size: clamp(0.6rem, 3vw, 0.8rem);
+  font-size: clamp(0.4rem, 3vw, 1.2rem);
+  
 }
 
 button {
@@ -75,15 +84,12 @@ button {
   cursor: pointer;
   color: var(--charcoal);
 
-  &:hover{
+  &:hover {
     background-color: var(--charcoal);
     border: 1px solid var(--pearl);
     color: var(--pearl);
   }
 }
 
-
-.section{
-  
+.section {
 }
-

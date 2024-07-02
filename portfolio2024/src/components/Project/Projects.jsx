@@ -42,8 +42,19 @@ const Projects = () => {
   const containerRef = useRef(null);
 
   useGSAP(() => {
-    // Animation for the container itself
-    
+    // DO NOT REMOVE EVEN DHO IDK WHAT THIS DOES
+    gsap.from(containerRef.current, {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top bottom", // Animation starts when top of container hits bottom of viewport
+        end: "bottom top", // Animation ends when bottom of container hits top of viewport
+        toggleActions: "play none none reverse", // Defines when animation plays and reverses
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      delay: 0.5,
+    });
     gsap.to(".accordion > *", {
       scrollTrigger: {
         trigger: containerRef.current,
@@ -52,6 +63,7 @@ const Projects = () => {
         toggleActions: "play none none reverse",
         markers: true, // Debug markers (optional)
       },
+      delay:0.5,
       height: "75vh",
       stagger: 0.2,
     });

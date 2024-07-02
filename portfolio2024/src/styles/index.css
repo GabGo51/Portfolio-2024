@@ -5,7 +5,7 @@ html {
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Bricolage Grotesque;
   font-weight: 400;
 
   color: var(--charcoal);
@@ -26,6 +26,27 @@ html {
   --charcoal: #1d1d1d;
 
   --test: #aaaaaa;
+
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #570f73;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 }
 
 .flex-h {

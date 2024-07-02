@@ -37,7 +37,7 @@ function App() {
         
         onEnter: () => changeStyles(index),
         onLeaveBack: () => changeStyles(index - 1),
-        markers:true
+        // markers:true
       });
     });
 

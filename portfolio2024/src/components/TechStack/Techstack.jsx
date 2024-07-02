@@ -94,12 +94,12 @@ const Techstack = () => {
   }, []);
 
   return (
-    <>
+    <div ref={containerRef} className="section techstack">
       <h2 ref={headerRef} className="tech-title">
         A Diversified Toolbox
       </h2>
 
-      <div className="techstack section" ref={containerRef}>
+      <div className="techstack" >
         <Toolbox />
 
         <div>
@@ -139,7 +139,7 @@ const Techstack = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

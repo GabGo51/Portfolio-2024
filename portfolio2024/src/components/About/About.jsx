@@ -126,6 +126,7 @@ const About = () => {
     <div className="center about section" ref={containerRef} id="about">
       <div className="moving-img">
         <div className="frame" ref={frameRef}>
+        <div class="blur-overlay"></div>
           <div ref={podRef1}>
             <img src={background} />
           </div>

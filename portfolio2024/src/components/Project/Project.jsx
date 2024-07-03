@@ -18,6 +18,7 @@ const Project = ({
   const getClassName = () => {
     if (picked === projectName) return "project picked";
     if (hovered === projectName) return "project hovered";
+    if (picked && picked !== projectName) return "hide"
     return "project";
   };
 

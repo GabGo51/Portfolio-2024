@@ -38,6 +38,7 @@ const Projects = () => {
   };
 
   const projects = projectsData;
+  const pickedProject = projectsData.find(project => project.name === picked);
 
   const containerRef = useRef(null);
 
@@ -63,7 +64,7 @@ const Projects = () => {
         toggleActions: "play none none reverse",
         markers: true, // Debug markers (optional)
       },
-      delay:0.5,
+      delay: 0.5,
       height: "75vh",
       stagger: 0.2,
     });
@@ -101,7 +102,8 @@ const Projects = () => {
   return (
     <div className="wrapper section" id="projects" ref={containerRef}>
       <div className="projects">
-        <h2>Selected work</h2>
+        {!picked && <h2>Selected work</h2>}
+
         {!picked && (
           <div ref={textRef} className="title">
             <h3>{hoveredProject.name}</h3>
@@ -110,7 +112,7 @@ const Projects = () => {
           </div>
         )}
 
-        <div className="accordion" >
+        <div className="accordion">
           {projects.map((project) => (
             <Project
               key={project.name}
@@ -123,6 +125,7 @@ const Projects = () => {
               handlePick={() => handlePick(project)}
               handleReset={handleReset}
               type={project.type}
+              
             />
           ))}
         </div>

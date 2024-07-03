@@ -129,6 +129,7 @@
   }
   h3, h4{
     color: var(--charcoal);
+    opacity: 1;
   }
 
   p {
@@ -155,5 +156,10 @@
     width: 50%;
     background-color: blueviolet;
     border-radius: 20px;
+  }
+
+  button{
+    opacity: 0;
+    transform: translateY(40px);
   }
 }

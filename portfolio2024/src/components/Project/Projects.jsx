@@ -38,7 +38,7 @@ const Projects = () => {
   };
 
   const projects = projectsData;
-  const pickedProject = projectsData.find(project => project.name === picked);
+  
 
   const containerRef = useRef(null);
 
@@ -119,12 +119,15 @@ const Projects = () => {
               projectNumber={project.number}
               projectName={project.name}
               imgSrc={project.img}
+              mainP={project.mainP}
+              techP={project.techP}
               hovered={hoveredProject.name}
               picked={picked}
               handleMouseOver={() => handleMouseOver(project)}
               handlePick={() => handlePick(project)}
               handleReset={handleReset}
               type={project.type}
+
               
             />
           ))}

@@ -1,7 +1,11 @@
+
+
+
 .hero{
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  width: 90%;
   height: 90vh;
 
   button{
@@ -11,5 +15,52 @@
 
   }
   
+}
+
+.line{
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  
+  opacity: 1;
+}
+
+.name, .job{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.job{
+  background: linear-gradient(270deg, #ff7f50, #1e90ff, #ff7f50);
+  animation: gradientAnimation 1s ease infinite;
+  height: 15vw;
+
+  h1{
+    color: white;
+    mix-blend-mode: difference;
+  }
+}
+
+
+.phone{
+  .name , .job{
+    gap: 20px;
+    padding: 10px;
+  }
 }
 

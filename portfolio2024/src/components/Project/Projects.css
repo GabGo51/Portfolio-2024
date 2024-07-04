@@ -29,6 +29,7 @@
   span {
     font-size: clamp(20px, 3vw, 30px);
     margin-right: 20px;
+    margin-bottom: 40px;
   }
 }
 
@@ -106,6 +107,10 @@
     position: absolute;
     bottom: 0;
     right: 0;
+
+    .disable{
+      cursor: not-allowed;
+    }
   }
 }
 

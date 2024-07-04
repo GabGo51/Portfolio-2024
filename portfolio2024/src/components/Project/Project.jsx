@@ -14,6 +14,8 @@ const Project = ({
   handleMouseOver,
   handlePick,
   handleReset,
+  mainP,
+  techP,
 }) => {
   const getClassName = () => {
     if (picked === projectName) return "project picked";
@@ -40,6 +42,8 @@ const Project = ({
           projectName={projectName}
           imgSrc={imgSrc}
           handleReset={handleReset}
+          mainP={mainP}
+          techP={techP}
         />
       )}
     </div>

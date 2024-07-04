@@ -28,7 +28,7 @@ const Header = () => {
         <div>Logo</div>
       </div>
       <button className="menu-toggle" onClick={toggleMenu}>
-        +
+        {toggleMenu ? <div>+</div> : <div>-</div>}
       </button>
       <nav className={menuOpen ? "open" : ""}>
         <ul>

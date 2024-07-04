@@ -102,7 +102,7 @@ const About = () => {
         
         markers: true, // Debug markers (optional)
       },
-      scale:0.8,
+      scale:1,
       duration: 2,
     });
 

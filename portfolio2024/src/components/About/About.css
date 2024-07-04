@@ -1,5 +1,6 @@
 .about {
   width: 80%;
+  margin-bottom: 200px;
 
   .snow {
     width: 75%;
@@ -11,6 +12,7 @@
   scale: 0.6;
   overflow: hidden;
   position: relative;
+  border-radius: 20px;
   
 }
 
@@ -76,6 +78,10 @@
 }
 
 @media (max-width: 1100px) {
+
+  .about{
+    margin-bottom: 100px;
+  }
   .frame {
     width: 100vw;
     scale: 1;
@@ -86,12 +92,12 @@
   .moving-img2 {
     width: 50%;
     margin-top: -54%;
-    margin-left: -40%;
+    margin-left: -50%;
   }
 
   .text-about {
     top: 10px;
-    right: 20px;
+    right: 10px;
     width: 55.2%;
 
     padding: 10px;

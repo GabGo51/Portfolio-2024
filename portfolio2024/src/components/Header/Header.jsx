@@ -36,6 +36,9 @@ const Header = () => {
             <p onClick={() => smoothScroll("#about")}>About</p>
           </li>
           <li>
+            <p onClick={() => smoothScroll("#techstack")}>Techstack</p>
+          </li>
+          <li>
             <p onClick={() => smoothScroll("#projects")}>Work</p>
           </li>
           <li>

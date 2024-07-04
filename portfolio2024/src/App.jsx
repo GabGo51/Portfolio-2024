@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Projects from "./components//Project/Projects";
 import './styles/App.css'
 import PhoneProjects from "./components/Project/Phone version/PhoneProjects";
@@ -22,10 +22,17 @@ function App() {
 
   const isDesktop = useScreenWidth()
 
+ 
+
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
   })
 
+  useEffect(() => {
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    }
+  }, [lenis]);
 
   useGSAP(() => {
     const sections = document.querySelectorAll('.section');

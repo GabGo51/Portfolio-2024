@@ -46,7 +46,7 @@
 }
 
 .job{
-  background: linear-gradient(270deg, #ff7f50, #1e90ff, #ff7f50);
+  background: linear-gradient(135deg, #4b878ac2,#1e2d29c2, #1d1d1d, #231f30cf, #887cafcf);
   animation: gradientAnimation 1s ease infinite;
   height: 15vw;
 

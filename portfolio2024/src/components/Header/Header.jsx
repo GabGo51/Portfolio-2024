@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "../Header/Header.css";
 
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -21,6 +24,16 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  useGSAP(() => {
+    gsap.from("header", {
+      opacity: 0,
+      y: -100,
+      duration: 1,
+      delay:3, 
+    });
+    
+  }, []);
 
   return (
     <header>

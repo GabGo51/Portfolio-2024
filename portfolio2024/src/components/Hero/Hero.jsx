@@ -13,6 +13,7 @@ const Hero = () => {
   useGSAP(() => {
 
     const t1 = gsap.timeline();
+    const t2 = gsap.timeline();
 
     t1.from("hr", {
 
@@ -26,9 +27,17 @@ const Hero = () => {
     })
     .to(".job",{
       height:"40%",
+      
     })
     .from(".job > h1", {
       opacity:0
+    })
+
+
+    t2.to(".job",{
+      width:"95%",
+      duration:1, 
+      delay:0.2
     })
   });
 

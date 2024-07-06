@@ -37,6 +37,7 @@
 
 
 .job{
+  width: 0%;
   background: linear-gradient(135deg, #4b878a, #1e2d29 33%, #000000 50%, #231e2d 67%, #887caf);
   transition: 1s;
   height: 10%;

@@ -13,9 +13,7 @@ header {
   /* Add your logo styling here */
 }
 
-nav {
-  display: flex;
-}
+  
 
 ul {
   all: unset;

@@ -1,11 +1,13 @@
-import img1 from "../img/alex.png";
-import img2 from "../img/gogosse.png";
+import img1 from "../img/Alexandra.png";
+import img2 from "../img/GOGOSSE.png";
+import img3 from "../img/WeFinanceU.png"
+import img4 from "../img/TATQ.png"
 
 const projectsData = [
   {
     number: "01",
     name: "TATQ",
-    img: img1,
+    img: img4,
     type: "Graphic Design Portfolio",
     url: "hello.com",
     git: "github.com",
@@ -41,7 +43,7 @@ const projectsData = [
   {
     number: "04",
     name: "WefinanceU",
-    img: img2,
+    img: img3,
     type: "Graphic Design Portfolio",
     url: "hello.com",
     git: "github.com",

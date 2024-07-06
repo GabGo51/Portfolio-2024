@@ -89,10 +89,10 @@ const About = () => {
         
         markers: true, // Debug markers (optional)
       },
-      opacity: 0.5,
+      opacity: 0,
       y: -30,
       x: -30,
-      duration: 2,
+      duration: 1,
     });
     gsap.to(frameRef.current, {
       scrollTrigger: {

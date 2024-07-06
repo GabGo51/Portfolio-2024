@@ -5,16 +5,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   width: 90%;
   height: 90vh;
   margin-bottom: 200px;
-
-  button{
-    position: absolute;
-    top: 100px;
-    right: 100px;
-
-  }
   
 }
 
@@ -22,11 +16,12 @@
   width: 100%;
   height: 2px;
   background-color: black;
-  
   opacity: 1;
 }
 
+
 .name, .job{
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 40px;
@@ -36,8 +31,9 @@
 
 
 
+
 .job{
-  width: 0%;
+  
   background: linear-gradient(135deg, #4b878a, #1e2d29 33%, #000000 50%, #231e2d 67%, #887caf);
   transition: 1s;
   height: 10%;

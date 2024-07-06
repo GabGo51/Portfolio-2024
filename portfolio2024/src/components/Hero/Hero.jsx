@@ -34,8 +34,8 @@ const Hero = () => {
     })
 
 
-    t2.to(".job",{
-      width:"95%",
+    t2.from(".job",{
+      width:"0%",
       duration:1, 
       delay:0.2
     })

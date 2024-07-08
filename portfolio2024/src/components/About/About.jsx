@@ -87,7 +87,7 @@ const About = () => {
         start: "top-=100 center",
         
         
-        markers: true, // Debug markers (optional)
+       
       },
       opacity: 0,
       y: -30,
@@ -100,7 +100,7 @@ const About = () => {
         start: "top-=100 center",
         
         
-        markers: true, // Debug markers (optional)
+       
       },
       scale:1,
       duration: 2,
@@ -112,7 +112,7 @@ const About = () => {
         start: "top center",
         
         
-        markers: true, // Debug markers (optional)
+      
       },
       opacity:0,
       y:50,
@@ -131,7 +131,7 @@ const About = () => {
             <img src={background} />
           </div>
           <div className="text-about">
-            <h3>About</h3>
+            <h3>Introducing myself</h3>
             <p className="p2">
               Hi, I'm Gab, a fearless little fella who loves to create stuff
               both offline and online. I aim to design simply while bringing my

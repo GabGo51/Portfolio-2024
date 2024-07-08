@@ -45,7 +45,7 @@ const Techstack = () => {
         start: "top center", // Trigger animation when container is at center of viewport
         end: "center center", // Trigger animation when container is at center of viewport
         scrub: false, // Disable scrubbing effect
-        markers: true, // Debug markers (optional)
+        
         once: true, // Trigger animation only once
       },
     });
@@ -55,7 +55,7 @@ const Techstack = () => {
         start: "top center", // Trigger animation when container is at center of viewport
         end: "center center", // Trigger animation when container is at center of viewport
         scrub: false, // Disable scrubbing effect
-        markers: true, // Debug markers (optional)
+        
         once: true, // Trigger animation only once
       },
     });

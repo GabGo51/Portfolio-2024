@@ -62,7 +62,7 @@ const Projects = () => {
         start: "top center",
         end: "top center",
         toggleActions: "play none none reverse",
-        markers: true, // Debug markers (optional)
+        
       },
       delay: 0.5,
       height: "75vh",

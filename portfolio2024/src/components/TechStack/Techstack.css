@@ -29,7 +29,7 @@ h2 {
 }
 
 .tech-icon {
-  width: 50px;
+  width: clamp(20px, 60%, 50px);
 }
 
 hr {

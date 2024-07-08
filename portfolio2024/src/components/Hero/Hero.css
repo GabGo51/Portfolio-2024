@@ -33,7 +33,7 @@
 
 
 .job{
-  
+  position: relative;
   background: linear-gradient(135deg, #4b878a, #1e2d29 33%, #000000 50%, #231e2d 67%, #887caf);
   transition: 1s;
   height: 10%;
@@ -44,6 +44,17 @@
   }
 }
 
+
+.blob{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+}
 
 .phone{
   height: 90vh;

@@ -1,9 +1,18 @@
 import React from "react";
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { MouseContext } from "../../context/mouseContext";
 
-const ProjectInfo = ({ projectNumber, projectName, imgSrc, handleReset, mainP, techP }) => {
+const ProjectInfo = ({
+  projectNumber,
+  projectName,
+  imgSrc,
+  handleReset,
+  mainP,
+  techP,
+}) => {
+  const { cursorChangeHandler } = useContext(MouseContext);
   useGSAP(() => {
     gsap.from(headerRef.current, {
       opacity: 0,
@@ -44,16 +53,14 @@ const ProjectInfo = ({ projectNumber, projectName, imgSrc, handleReset, mainP, t
   const buttonRef = useRef(null);
 
   return (
-    <div className="info-container">
+    <div className="info-container" onMouseEnter={()=>cursorChangeHandler("")}>
       <div className="row">
         <div className="text">
           <h3 ref={headerRef}>
             {projectNumber}
             {projectName}
           </h3>
-          <p ref={p1ref}>
-            {mainP}
-          </p>
+          <p  ref={p1ref}>{mainP}</p>
         </div>
         <div className="black-box">
           <img />
@@ -65,9 +72,7 @@ const ProjectInfo = ({ projectNumber, projectName, imgSrc, handleReset, mainP, t
         </div>
         <div className="text2">
           <h4 ref={subHeaderRef}>TechStack</h4>
-          <p ref={p2ref}>
-            {techP}
-          </p>
+          <p  ref={p2ref}>{techP}</p>
           {projectName !== "TATQ" ? (
             <div className="btn-box" ref={buttonRef}>
               <button onClick={handleReset}>View Site</button>
@@ -76,7 +81,9 @@ const ProjectInfo = ({ projectNumber, projectName, imgSrc, handleReset, mainP, t
             </div>
           ) : (
             <div className="btn-box" ref={buttonRef}>
-              <button className="disable" disabled onClick={handleReset}>Still in developement</button>
+              <button className="disable" disabled onClick={handleReset}>
+                Still in developement
+              </button>
               <button onClick={handleReset}>x</button>
             </div>
           )}

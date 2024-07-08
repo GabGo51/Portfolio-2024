@@ -43,7 +43,7 @@
 
 .project {
   position: relative;
-  cursor: pointer;
+  
   transition: 2s;
   background-color: rgb(255, 255, 255, 0);
   height: 5vh;
@@ -76,7 +76,7 @@
 .hovered {
   transition: 2s;
   width: 82%;
-
+  cursor: pointer;
   img {
     opacity: 1;
   }
@@ -87,8 +87,8 @@
   transform-origin: bottom;
   transition: all 2s, background-color 500ms;
   position: fixed;
-  height: 85vh !important;
-  width: 95%;
+  height: 90vh !important;
+  width: 100%;
   
   background-color: var(--pearl);
   background-image: none;
@@ -107,9 +107,13 @@
     position: absolute;
     bottom: 0;
     right: 0;
-
+    
     .disable{
       cursor: not-allowed;
+    }
+
+    button{
+      cursor: pointer;
     }
   }
 }
@@ -138,7 +142,7 @@
   }
 
   p {
-    font-size: clamp(16px, 1.5vw, 24px);
+    font-size: clamp(16px, 1.5vw, 24px)!important;
     color: var(--charcoal);
   }
 

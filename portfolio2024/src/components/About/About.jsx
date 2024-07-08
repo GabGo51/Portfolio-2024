@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useContext, useState, useRef } from "react";
 import "../About/About.css";
 import background from "../../img/snowbackground2.png";
 import snow from "../../img/snow.png";
@@ -9,11 +9,14 @@ import useScreenWidth from "../../hooks/useScreenWidth";
 import Linkedin from "../../img/Linkedin.png";
 import Git from "../../img/Git.png";
 import "../../styles/App.css";
+import { MouseContext } from "../../context/mouseContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const isDesktop = useScreenWidth();
+
+  const { cursorChangeHandler } = useContext(MouseContext);
 
   const podRef1 = useRef(null);
   const podRef2 = useRef(null);
@@ -78,16 +81,13 @@ const About = () => {
 
   const containerRef = useRef(null);
   const imgRef = useRef(null);
-  const frameRef = useRef(null)
+  const frameRef = useRef(null);
 
   useGSAP(() => {
     gsap.from(imgRef.current, {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top-=100 center",
-        
-        
-       
       },
       opacity: 0,
       y: -30,
@@ -98,11 +98,8 @@ const About = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top-=100 center",
-        
-        
-       
       },
-      scale:1,
+      scale: 1,
       duration: 2,
     });
 
@@ -110,23 +107,24 @@ const About = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top center",
-        
-        
-      
       },
-      opacity:0,
-      y:50,
+      opacity: 0,
+      y: 50,
       duration: 1,
-      delay:1, 
-      stagger:0.2,
+      delay: 1,
+      stagger: 0.2,
     });
   }, []);
 
   return (
     <div className="center about section" ref={containerRef} id="about">
       <div className="moving-img">
-        <div className="frame" ref={frameRef}>
-        
+        <div
+          className="frame"
+          ref={frameRef}
+          onMouseEnter={() => cursorChangeHandler("hover")}
+          onMouseLeave={() => cursorChangeHandler("")}
+        >
           <div ref={podRef1}>
             <img src={background} />
           </div>
@@ -143,10 +141,17 @@ const About = () => {
               "Dont overthink it, just focus on the landing"
             </p>
             <div className="icon-container">
-              <a target="blank_" href="https://github.com/GabGo51">
+              <a
+                target="blank_"
+                href="https://github.com/GabGo51"
+                onMouseEnter={() => cursorChangeHandler("button")}
+                onMouseLeave={() => cursorChangeHandler("hover")}
+              >
                 <img src={Git} alt="icon" className="icon" />
               </a>
               <a
+                onMouseEnter={() => cursorChangeHandler("button")}
+                onMouseLeave={() => cursorChangeHandler("hover")}
                 target="blank_"
                 href="https://www.linkedin.com/in/gabriel-gosselin/"
               >
@@ -156,7 +161,11 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="moving-img2" ref={podRef2}>
+      <div
+        className="moving-img2"
+        ref={podRef2}
+        onMouseEnter={() => cursorChangeHandler("hover")}
+      >
         <img className="snow" src={snow} ref={imgRef} />
       </div>
     </div>

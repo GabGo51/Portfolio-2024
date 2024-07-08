@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./Projects.css";
 import ProjectInfo from "./ProjectInfo";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MouseContext } from "../../context/mouseContext";
 
 const Project = ({
   projectNumber,
@@ -24,10 +25,14 @@ const Project = ({
     return "project";
   };
 
+  const { cursorChangeHandler } = useContext(MouseContext);
+
 
   return (
     <div
       onMouseOver={() => handleMouseOver(projectName)}
+      onMouseEnter={() => cursorChangeHandler("proj")}
+      onMouseLeave={() => cursorChangeHandler("")}
       onClick={() => handlePick(projectName)}
       className={getClassName()}
     >

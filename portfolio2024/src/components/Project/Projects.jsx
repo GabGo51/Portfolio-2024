@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
+import { MouseContext } from "../../context/mouseContext";
 import "./Projects.css";
 import Project from "./Project";
 import projectsData from "../../data/projects";
@@ -12,13 +13,18 @@ const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(projectsData[1]);
   const [picked, setPicked] = useState(false);
 
+  const { cursorChangeHandler } = useContext(MouseContext);
+
   const handleMouseOver = (project) => {
     if (picked) {
+      cursorChangeHandler("")
       return;
     }
     if (project === hoveredProject) {
+      cursorChangeHandler("proj")
       return;
     } else {
+      
       animateTextOut(() => {
         setHoveredProject(project);
         animateTextIn();
@@ -27,8 +33,10 @@ const Projects = () => {
   };
 
   const handlePick = (project) => {
+    cursorChangeHandler("")
     setPicked(project.name);
     setHoveredProject(false);
+    
   };
 
   const handleReset = (e) => {
@@ -38,7 +46,6 @@ const Projects = () => {
   };
 
   const projects = projectsData;
-  
 
   const containerRef = useRef(null);
 
@@ -62,7 +69,6 @@ const Projects = () => {
         start: "top center",
         end: "top center",
         toggleActions: "play none none reverse",
-        
       },
       delay: 0.5,
       height: "75vh",
@@ -112,7 +118,7 @@ const Projects = () => {
           </div>
         )}
 
-        <div className="accordion">
+        <div className="accordion" >
           {projects.map((project) => (
             <Project
               key={project.name}
@@ -127,7 +133,7 @@ const Projects = () => {
               handlePick={() => handlePick(project)}
               handleReset={handleReset}
               type={project.type}
-
+              
               
             />
           ))}

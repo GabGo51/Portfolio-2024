@@ -1,3 +1,11 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  
+}
+
 html {
   transition: 2s ease;
   width: 100vw;
@@ -19,6 +27,8 @@ html {
   --grey: #dfe0df;
   --beige: #e4ddd6;
   --green: #4b878a;
+  --scrollbar-thumb-color: var(--purple); /* Default to green */
+  --scrollbar-thumb-color2: var(--green); /* Default to green */
 
   /* Dark mode color */
   --pearl: #e5e5e5;
@@ -28,26 +38,26 @@ html {
   --test: #aaaaaa;
 
   /* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f100;
-}
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f100;
+  }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #887caf;
-  border-radius: 20px;
-  
-}
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    transition: 500ms;
+    background: var(--scrollbar-thumb-color);
+    border-radius: 20px;
+  }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #ff0000;
-}
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff0000;
+  }
 }
 
 .flex-h {
@@ -66,7 +76,6 @@ h4 {
 
 h1 {
   font-size: clamp(2rem, 10vw, 8rem);
-  
 }
 h2 {
   font-size: clamp(1.8rem, 3vw, 3rem);
@@ -78,23 +87,17 @@ h4 {
   font-size: clamp(1.4rem, 3vw, 1.9rem);
 }
 
-
-
 .p1 {
   font-size: clamp(1rem, 3vw, 1.9rem);
-  
 }
 .p2 {
   font-size: clamp(0.7rem, 3vw, 1.7rem);
-  
 }
 .p3 {
   font-size: clamp(0.5rem, 3vw, 1.5rem);
-  
 }
 .p4 {
   font-size: clamp(0.4rem, 3vw, 1.2rem);
-  
 }
 
 button {
@@ -105,7 +108,7 @@ button {
   font-size: 20px;
   padding: 10px 15px;
   border-radius: 20px;
-  cursor: pointer;
+  
   color: var(--charcoal);
 
   &:hover {
@@ -113,7 +116,4 @@ button {
     border: 1px solid var(--pearl);
     color: var(--pearl);
   }
-}
-
-.section {
 }

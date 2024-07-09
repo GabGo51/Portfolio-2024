@@ -13,12 +13,11 @@
   overflow: hidden;
   position: relative;
   border-radius: 20px;
-  
 }
 
 .text-about {
   position: absolute;
-  top: 8%;
+  top: 5%;
   right: 8%;
   width: 40%;
   display: flex;
@@ -31,13 +30,25 @@
 
 .icon-container {
   display: flex;
-  justify-content: space-between;
-  width: clamp(30px, 30%, 50px);
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  height: 50px;
+
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    
+  }
 
   .icon {
     transition: 400ms;
     width: clamp(20px, 90%, 30px);
     border-radius: 4px;
+    margin: 0;
   }
 }
 
@@ -61,7 +72,7 @@
 }
 
 .moving-img2 {
-  width: 32%;
+  width: 42%;
   max-width: 670px;
   background-size: cover;
   background-position: center;
@@ -73,13 +84,12 @@
   font-size: 2em;
   position: absolute;
   z-index: 30;
-  margin-top: -40%;
-  margin-left: -25%;
+  top: 5%;
+  left: 5%;
 }
 
 @media (max-width: 1100px) {
-
-  .about{
+  .about {
     margin-bottom: 100px;
   }
   .frame {

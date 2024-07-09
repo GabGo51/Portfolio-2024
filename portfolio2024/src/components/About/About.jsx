@@ -1,6 +1,6 @@
 import { useEffect, useContext, useState, useRef } from "react";
 import "../About/About.css";
-import background from "../../img/snowbackground2.png";
+import background from "../../img/snowbackground3.png";
 import snow from "../../img/snow.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -140,18 +140,18 @@ const About = () => {
               {" "}
               "Dont overthink it, just focus on the landing"
             </p>
-            <div className="icon-container">
-              <a
+            <div className="icon-container" onMouseLeave={() => cursorChangeHandler("hover")}>
+              <a className="git"
                 target="blank_"
                 href="https://github.com/GabGo51"
-                onMouseEnter={() => cursorChangeHandler("button")}
-                onMouseLeave={() => cursorChangeHandler("hover")}
+                onMouseEnter={() => cursorChangeHandler("buttonn")}
+                
               >
                 <img src={Git} alt="icon" className="icon" />
               </a>
-              <a
+              <a className="linkedin"
                 onMouseEnter={() => cursorChangeHandler("button")}
-                onMouseLeave={() => cursorChangeHandler("hover")}
+                
                 target="blank_"
                 href="https://www.linkedin.com/in/gabriel-gosselin/"
               >
@@ -159,14 +159,14 @@ const About = () => {
               </a>
             </div>
           </div>
+          <div
+            className="moving-img2"
+            ref={podRef2}
+            onMouseEnter={() => cursorChangeHandler("hover")}
+          >
+            <img className="snow" src={snow} ref={imgRef} />
+          </div>
         </div>
-      </div>
-      <div
-        className="moving-img2"
-        ref={podRef2}
-        onMouseEnter={() => cursorChangeHandler("hover")}
-      >
-        <img className="snow" src={snow} ref={imgRef} />
       </div>
     </div>
   );

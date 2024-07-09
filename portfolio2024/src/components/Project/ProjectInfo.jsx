@@ -73,7 +73,7 @@ const ProjectInfo = ({
         <div className="text2">
           <h4 ref={subHeaderRef}>TechStack</h4>
           <p  ref={p2ref}>{techP}</p>
-          {projectName !== "TATQ" ? (
+          {projectName !== "TATQ" && projectName !== "WeFinanceU" ? (
             <div className="btn-box" ref={buttonRef}>
               <button onClick={handleReset}>View Site</button>
               <button onClick={handleReset}>GitHub</button>

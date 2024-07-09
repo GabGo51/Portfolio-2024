@@ -10,7 +10,9 @@ header {
 }
 
 .logo {
-  /* Add your logo styling here */
+  img{
+    width: 120px;
+  }
 }
 
   

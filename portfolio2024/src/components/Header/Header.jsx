@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Header/Header.css";
-
+import logo from '../../img/logo.png'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <header>
       <div className="logo">
-        <div>Logo</div>
+        <div><img alt="logo" src={logo}/></div>
       </div>
       <button className="menu-toggle" onClick={toggleMenu}>
         {toggleMenu ? <div>+</div> : <div>-</div>}

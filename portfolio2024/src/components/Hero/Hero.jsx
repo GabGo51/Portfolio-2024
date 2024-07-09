@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useScreenWidth from "../../hooks/useScreenWidth";
 import "./Hero.css";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {

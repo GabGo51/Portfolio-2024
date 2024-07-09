@@ -34,7 +34,7 @@ const Cursor = () => {
                 : "dot"
             }
           >
-            {cursorType === "hover" && <p className="text-cursor">Move</p>}
+            {cursorType === "hover" && <p className="text-cursor">Try Moving</p>}
             {cursorType === "proj" && <p className="text-cursor">More plus</p>}
           </div>
         </div>
@@ -50,8 +50,8 @@ const Cursor = () => {
                 : "dot"
             }
           >
-            {cursorType === "hover" && <p className="text-cursor">Move</p>}
-            {cursorType === "proj" && <p className="text-cursor">More</p>}
+            {cursorType === "hover" && <p className="text-cursor">Try Moving</p>}
+            {cursorType === "proj" && <p className="text-cursor">More +</p>}
           </div>
         </div>
       )}

@@ -2,6 +2,12 @@
   mix-blend-mode: difference;
   z-index: 999;
   position: absolute;
+
+  p {
+    font-weight:900;
+    
+    
+  }
 }
 
 .container2 {
@@ -15,6 +21,7 @@
 
     .text-cursor {
       font-weight:900;
+      text-wrap: wrap;
       color: rgb(255, 255, 255);
       
     }
@@ -62,6 +69,7 @@
 }
 
 .text-cursor {
+  font-family: Bricolage Grotesque;
   font-weight:900;
   color: rgb(0, 0, 0);
   mix-blend-mode: normal;

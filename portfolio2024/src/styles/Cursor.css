@@ -28,6 +28,12 @@
   .dot {
     background-color: var(--green);
 
+
+    &.header {
+      width: 45px;
+      height: 45px;
+    }
+
     
   }
 }

@@ -6,6 +6,7 @@ import projectsData from "../../data/projects";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useSmoothScroll from "../../hooks/useSmoothScroll";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +14,8 @@ const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(projectsData[1]);
   const [picked, setPicked] = useState(false);
 
+
+  const { smoothScroll } = useSmoothScroll();
   const { cursorChangeHandler } = useContext(MouseContext);
 
   const handleMouseOver = (project) => {
@@ -36,7 +39,7 @@ const Projects = () => {
     cursorChangeHandler("")
     setPicked(project.name);
     setHoveredProject(false);
-    
+    smoothScroll("#projects")
   };
 
   const handleReset = (e) => {
@@ -48,6 +51,7 @@ const Projects = () => {
   const projects = projectsData;
 
   const containerRef = useRef(null);
+  const accordionRef = useRef(null)
 
   useGSAP(() => {
     // DO NOT REMOVE EVEN DHO IDK WHAT THIS DOES
@@ -118,7 +122,7 @@ const Projects = () => {
           </div>
         )}
 
-        <div className="accordion" >
+        <div className="accordion" ref={accordionRef} >
           {projects.map((project) => (
             <Project
               key={project.name}

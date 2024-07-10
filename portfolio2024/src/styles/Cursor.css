@@ -4,9 +4,7 @@
   position: absolute;
 
   p {
-    font-weight:900;
-    
-    
+    font-weight: 900;
   }
 }
 
@@ -15,22 +13,27 @@
   z-index: 999;
   position: absolute;
 
-  .dot{
+  .dot {
     background-color: #887caf;
-    
 
     .text-cursor {
-      font-weight:900;
+      font-weight: 900;
       text-wrap: wrap;
       color: rgb(255, 255, 255);
-      
-      
     }
   }
 }
 
+.proj-active {
+  .dot {
+    background-color: var(--green);
+
+    
+  }
+}
+
 .dot {
-  transition: width 500ms, height 500ms;
+  transition: width 500ms, height 500ms, border-radius 500ms;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -39,12 +42,17 @@
   background-color: rgb(255, 255, 255);
   mix-blend-mode: difference;
   border-radius: 100%;
-  transform: translate(-57%, -57%);
+  transform: translate(-60%, -60%);
   z-index: 999;
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &.header {
+    width: 45px;
+    height: 45px;
+  }
 
   &.hover {
     width: 100px;
@@ -55,23 +63,20 @@
     border-radius: 5px;
     width: 45px;
     height: 45px;
-    background-color: transparent;
-    border: 2px solid rgb(255, 255, 255);
+    
   }
 
   &.buttonn {
     border-radius: 50%;
     width: 45px;
     height: 45px;
-    background-color: transparent;
-    border: 2px solid rgb(255, 255, 255);
+    
   }
 
   &.proj {
     width: 100px;
     height: 100px;
     mix-blend-mode: normal;
-    
   }
 
   @media (max-width: 1100px) {
@@ -80,18 +85,10 @@
 }
 
 .text-cursor {
-  transform: translate3D(5%, -10%, 0);
-  
-  font-weight:900;
+  transform: translate3D(5%, -15%, 0);
+  font-weight: 900;
   color: rgb(0, 0, 0);
   mix-blend-mode: normal;
   display: flex;
-      flex-direction: column;
-}
-
-.hover:before,
-.hover:after {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  cursor: none;
+  flex-direction: column;
 }

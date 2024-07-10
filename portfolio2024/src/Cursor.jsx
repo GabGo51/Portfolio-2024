@@ -10,7 +10,7 @@ const Cursor = () => {
   const { x, y } = useMousePosition();
   const cursorRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     // Use GSAP to animate the cursor
     gsap.to(cursorRef.current, {
       duration: 0.5,
@@ -20,42 +20,19 @@ const Cursor = () => {
     });
   }, [x, y]);
 
+  const cursorClass = cursorType === "hover" || cursorType === "button" || cursorType === "proj" || cursorType === "buttonn"  || cursorType === "header" ? `dot ${cursorType}` : "dot";
+  const containerClass = cursorType === "proj" || cursorType === "hover" ? "container2" : "container";
+  const projClass = cursorType === "proj" ? "proj-active" : "";
+
+  console.log(cursorClass);
+
   return (
-    <>
-      {cursorType !== "proj" ? (
-        <div className="container">
-          <div
-            ref={cursorRef}
-            className={
-              cursorType === "hover" ||
-              cursorType === "button" ||
-              cursorType === "proj" ||cursorType === "buttonn"
-                ? `dot ${cursorType}`
-                : "dot"
-            }
-          >
-            {cursorType === "hover" && <p className="text-cursor"><span>Try</span> <span>Moving</span> </p>}
-            {cursorType === "proj" && <p className="text-cursor">More plus</p>}
-          </div>
-        </div>
-      ) : (
-        <div className="container2">
-          <div
-            ref={cursorRef}
-            className={
-              cursorType === "hover" ||
-              cursorType === "button" ||
-              cursorType === "proj"
-                ? `dot ${cursorType}`
-                : "dot"
-            }
-          >
-            {cursorType === "hover" && <p className="text-cursor"><span>Try</span> <span>Moving</span> </p>}
-            {cursorType === "proj" && <p className="text-cursor">More +</p>}
-          </div>
-        </div>
-      )}
-    </>
+    <div className={`${containerClass} ${projClass}`}>
+      <div ref={cursorRef} className={cursorClass}>
+        {cursorType === "hover" && <p className="text-cursor"><span>Try</span> <span>Moving</span></p>}
+        {cursorType === "proj" && <p className="text-cursor">More +</p>}
+      </div>
+    </div>
   );
 };
 

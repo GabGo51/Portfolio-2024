@@ -1,9 +1,8 @@
 h2 {
-  width: 90vw;
+  width: 90%;
   text-align: left;
   transform: translateY(-20px);
 }
-
 
 
 .tech-subtitle {
@@ -11,7 +10,7 @@ h2 {
 }
 
 .techstack {
-  width: 84vw;
+  width: 80vw;
 
   position: relative;
   margin-bottom: 5vw;

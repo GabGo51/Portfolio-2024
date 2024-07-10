@@ -1,5 +1,5 @@
 import img1 from "../img/Alexandra.png";
-
+import img2 from '../img/gogosse.png'
 import img3 from "../img/WeFinanceU.png";
 import img4 from "../img/TATQ.png";
 
@@ -19,7 +19,7 @@ const projectsData = [
   {
     number: "02",
     name: "GOGOSSE",
-    img: img3,
+    img: img2,
     type: "Graphic Design Portfolio",
     url: "hello.com",
     git: "github.com",

@@ -12,7 +12,9 @@ const ProjectInfo = ({
   mainP,
   techP,
 }) => {
+
   const { cursorChangeHandler } = useContext(MouseContext);
+
   useGSAP(() => {
     gsap.from(headerRef.current, {
       opacity: 0,
@@ -52,15 +54,20 @@ const ProjectInfo = ({
   const p2ref = useRef(null);
   const buttonRef = useRef(null);
 
+  
+
   return (
-    <div className="info-container" onMouseEnter={()=>cursorChangeHandler("")}>
+    <div
+      className="info-container"
+      onMouseEnter={() => cursorChangeHandler("")}
+    >
       <div className="row">
         <div className="text">
           <h3 ref={headerRef}>
             {projectNumber}
             {projectName}
           </h3>
-          <p  ref={p1ref}>{mainP}</p>
+          <p ref={p1ref}>{mainP}</p>
         </div>
         <div className="black-box">
           <img />
@@ -72,19 +79,52 @@ const ProjectInfo = ({
         </div>
         <div className="text2">
           <h4 ref={subHeaderRef}>TechStack</h4>
-          <p  ref={p2ref}>{techP}</p>
+          <p ref={p2ref}>{techP}</p>
           {projectName !== "TATQ" && projectName !== "WeFinanceU" ? (
-            <div className="btn-box" ref={buttonRef}>
-              <button onClick={handleReset}>View Site</button>
-              <button onClick={handleReset}>GitHub</button>
-              <button onClick={handleReset}>x</button>
+            <div
+              className="btn-box"
+              ref={buttonRef}
+              onMouseLeave={() => cursorChangeHandler("")}
+            >
+              <button
+                onClick={handleReset}
+                onMouseEnter={() => cursorChangeHandler("header")}
+              >
+                View Site
+              </button>
+              <button
+                onClick={handleReset}
+                onMouseEnter={() => cursorChangeHandler("header")}
+              >
+                GitHub
+              </button>
+              <button
+                onClick={handleReset}
+                onMouseEnter={() => cursorChangeHandler("header")}
+              >
+                x
+              </button>
             </div>
           ) : (
-            <div className="btn-box" ref={buttonRef}>
-              <button className="disable" disabled onClick={handleReset}>
+            <div
+              className="btn-box"
+              ref={buttonRef}
+              onMouseLeave={() => cursorChangeHandler("")}
+            >
+              <button
+                className="disable"
+                disabled
+                onClick={handleReset}
+                onMouseEnter={() => cursorChangeHandler("header")}
+              >
                 Still in developement
               </button>
-              <button onClick={handleReset}>x</button>
+              <button
+                onClick={handleReset}
+                onMouseEnter={() => cursorChangeHandler("header")}
+              >
+                x
+              </button>
             </div>
           )}
         </div>

@@ -5,8 +5,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
-import icon1 from "../../img/code.png";
-import icon2 from "../../img/brush.png";
+import icon1 from "../../img/Icons/code.png";
+import icon2 from "../../img/Icons/brush.png";
 
 const techItemsDevelopment = [
   "React",

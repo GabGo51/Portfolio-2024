@@ -1,7 +1,7 @@
 // Header.js
 import React, { useContext , useState} from "react";
 import "../Header/Header.css";
-import logo from "../../img/logo.png";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { MouseContext } from "../../context/mouseContext";

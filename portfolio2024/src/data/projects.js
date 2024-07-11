@@ -1,8 +1,8 @@
-import img1 from "../img/Alexandra.png";
-import img2 from '../img/gogosse.png'
-import img3 from "../img/WeFinanceU.png";
-import img4 from "../img/TATQ.png";
-import gogossem1 from '../img/gogossem1.png'
+import img1 from "../img/Thumbnails/Alexandra.png";
+import img2 from '../img/Thumbnails/gogosse.png'
+import img3 from "../img/Thumbnails/WeFinanceU.png";
+import img4 from "../img/Thumbnails/TATQ.png";
+import gogossem1 from '../img/Mockups/gogossem1.png'
 
 const projectsData = [
   {

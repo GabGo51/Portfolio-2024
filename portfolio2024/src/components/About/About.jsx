@@ -1,13 +1,13 @@
 import { useEffect, useContext, useState, useRef } from "react";
 import "../About/About.css";
-import background from "../../img/snowbackground3.png";
-import snow from "../../img/snow.png";
+import background from "../../img/Others/snowbackground3.png";
+import snow from "../../img/Others/snow.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useScreenWidth from "../../hooks/useScreenWidth";
-import Linkedin from "../../img/Linkedin.png";
-import Git from "../../img/Git.png";
+import Linkedin from "../../img/Icons/Linkedin.png";
+import Git from "../../img/Icons/Git.png";
 import "../../styles/App.css";
 import { MouseContext } from "../../context/mouseContext";
 

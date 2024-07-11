@@ -13,8 +13,9 @@ const ProjectInfo = ({
   techP,
   mockup1,
   mockup2,
+  url,
+  git,
 }) => {
-
   const { cursorChangeHandler } = useContext(MouseContext);
 
   useGSAP(() => {
@@ -56,8 +57,6 @@ const ProjectInfo = ({
   const p2ref = useRef(null);
   const buttonRef = useRef(null);
 
-  
-
   return (
     <div
       className="info-container"
@@ -71,14 +70,26 @@ const ProjectInfo = ({
           </h3>
           <p ref={p1ref}>{mainP}</p>
         </div>
-        <div className="black-box">
-          <img alt="website mockup" className="mockup"  src={mockup1}/>
-        </div>
+        <a
+          target="_blank"
+          href={url}
+          className="mock-box1"
+          onMouseEnter={() => cursorChangeHandler("header")}
+          onMouseLeave={() => cursorChangeHandler("")}
+        >
+          <img alt="website mockup" className="mockup" src={mockup1} />
+        </a>
       </div>
       <div className="row">
-        <div className="red-box">
-        <img alt="website mockup" className="mockup"  src={mockup2}/>
-        </div>
+        <a
+          target="_blank"
+          href={url}
+          className="mock-box2"
+          onMouseEnter={() => cursorChangeHandler("header")}
+          onMouseLeave={() => cursorChangeHandler("")}
+        >
+          <img alt="website mockup" className="mockup" src={mockup2} />
+        </a>
         <div className="text2">
           <h4 ref={subHeaderRef}>TechStack</h4>
           <p ref={p2ref}>{techP}</p>
@@ -88,18 +99,18 @@ const ProjectInfo = ({
               ref={buttonRef}
               onMouseLeave={() => cursorChangeHandler("")}
             >
-              <button
-                onClick={handleReset}
-                onMouseEnter={() => cursorChangeHandler("header")}
-              >
-                View Site
-              </button>
-              <button
-                onClick={handleReset}
-                onMouseEnter={() => cursorChangeHandler("header")}
-              >
-                GitHub
-              </button>
+              <a target="#" href={url}>
+                <button onMouseEnter={() => cursorChangeHandler("header")}>
+                  View Site
+                </button>
+              </a>
+
+              <a target="#" href={git}>
+                <button onMouseEnter={() => cursorChangeHandler("header")}>
+                  GitHub
+                </button>
+              </a>
+
               <button
                 onClick={handleReset}
                 onMouseEnter={() => cursorChangeHandler("header")}

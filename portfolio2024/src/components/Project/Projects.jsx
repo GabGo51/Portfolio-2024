@@ -20,7 +20,7 @@ const Projects = () => {
 
   const handleMouseOver = (project) => {
     if (picked) {
-      cursorChangeHandler("")
+      // cursorChangeHandler("")
       return;
     }
     if (project === hoveredProject) {
@@ -123,7 +123,7 @@ const Projects = () => {
         )}
 
         <div className="accordion" ref={accordionRef} >
-          {projects.map((project) => (
+          {projects && projects.map((project) => (
             <Project
               key={project.name}
               projectNumber={project.number}
@@ -131,6 +131,8 @@ const Projects = () => {
               imgSrc={project.img}
               mainP={project.mainP}
               techP={project.techP}
+              url={project.url}
+              git={project.git}
               hovered={hoveredProject.name}
               picked={picked}
               handleMouseOver={() => handleMouseOver(project)}

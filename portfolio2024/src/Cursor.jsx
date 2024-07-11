@@ -1,6 +1,6 @@
 import useMousePosition from "./hooks/useMousePosition";
 import { MouseContext } from "./context/mouseContext";
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useRef } from "react";
 import "./styles/Cursor.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -20,16 +20,30 @@ const Cursor = () => {
     });
   }, [x, y]);
 
-  const cursorClass = cursorType === "hover" || cursorType === "button" || cursorType === "proj" || cursorType === "buttonn"  || cursorType === "header" ? `dot ${cursorType}` : "dot";
-  const containerClass = cursorType === "proj" || cursorType === "hover" ? "container2" : "container";
+  const cursorClass =
+    cursorType === "hover" ||
+    cursorType === "button" ||
+    cursorType === "proj" ||
+    cursorType === "buttonn" ||
+    cursorType === "header"
+      ? `dot ${cursorType}`
+      : "dot";
+  const containerClass =
+    cursorType === "proj" || cursorType === "hover"
+      ? "container2"
+      : "container";
   const projClass = cursorType === "proj" ? "proj-active" : "";
 
-  console.log(cursorClass);
+  
 
   return (
     <div className={`${containerClass} ${projClass}`}>
       <div ref={cursorRef} className={cursorClass}>
-        {cursorType === "hover" && <p className="text-cursor"><span>Try</span> <span>Moving</span></p>}
+        {cursorType === "hover" && (
+          <p className="text-cursor">
+            <span>Try</span> <span>Moving</span>
+          </p>
+        )}
         {cursorType === "proj" && <p className="text-cursor">More +</p>}
       </div>
     </div>

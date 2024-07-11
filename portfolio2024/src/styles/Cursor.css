@@ -21,6 +21,11 @@
       text-wrap: wrap;
       color: rgb(255, 255, 255);
     }
+
+    &.header {
+      width: 45px;
+      height: 45px;
+    }
   }
 }
 

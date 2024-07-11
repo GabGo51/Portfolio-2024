@@ -19,6 +19,8 @@ const Project = ({
   techP,
   mockup1,
   mockup2,
+  url,
+  git,
 }) => {
   const getClassName = () => {
     if (picked === projectName) return "project picked";
@@ -52,6 +54,8 @@ const Project = ({
           techP={techP}
           mockup1={mockup1}
           mockup2={mockup2}
+          url={url}
+          git={git}
         />
       )}
     </div>

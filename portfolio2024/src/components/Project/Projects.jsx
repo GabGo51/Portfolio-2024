@@ -137,6 +137,8 @@ const Projects = () => {
               handlePick={() => handlePick(project)}
               handleReset={handleReset}
               type={project.type}
+              mockup1={project.mockup1}
+              mockup2={project.mockup2}
               
               
             />

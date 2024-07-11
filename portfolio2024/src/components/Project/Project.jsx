@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import "./Projects.css";
 import ProjectInfo from "./ProjectInfo";
 import gsap from "gsap";
@@ -17,16 +17,17 @@ const Project = ({
   handleReset,
   mainP,
   techP,
+  mockup1,
+  mockup2,
 }) => {
   const getClassName = () => {
     if (picked === projectName) return "project picked";
     if (hovered === projectName) return "project hovered";
-    if (picked && picked !== projectName) return "hide"
+    if (picked && picked !== projectName) return "hide";
     return "project";
   };
 
   const { cursorChangeHandler } = useContext(MouseContext);
-
 
   return (
     <div
@@ -49,6 +50,8 @@ const Project = ({
           handleReset={handleReset}
           mainP={mainP}
           techP={techP}
+          mockup1={mockup1}
+          mockup2={mockup2}
         />
       )}
     </div>

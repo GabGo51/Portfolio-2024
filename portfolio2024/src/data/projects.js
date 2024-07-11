@@ -2,12 +2,15 @@ import img1 from "../img/Alexandra.png";
 import img2 from '../img/gogosse.png'
 import img3 from "../img/WeFinanceU.png";
 import img4 from "../img/TATQ.png";
+import gogossem1 from '../img/gogossem1.png'
 
 const projectsData = [
   {
     number: "01",
     name: "TATQ",
     img: img4,
+    mockup1:gogossem1,
+    mockup2:gogossem1, 
     type: "Environemental Blog & Research",
     url: "hello.com",
     git: "github.com",
@@ -20,6 +23,8 @@ const projectsData = [
     number: "02",
     name: "GOGOSSE",
     img: img2,
+    mockup1:gogossem1,
+    mockup2:gogossem1, 
     type: "Graphic Design Portfolio",
     url: "hello.com",
     git: "github.com",
@@ -32,6 +37,8 @@ const projectsData = [
     number: "03",
     name: "WeFinanceU",
     img: img3,
+    mockup1:gogossem1,
+    mockup2:gogossem1, 
     type: "Real Estate Financing",
     url: "hello.com",
     git: "github.com",
@@ -44,6 +51,8 @@ const projectsData = [
     number: "04",
     name: "Alexandra Nicolov",
     img: img1,
+    mockup1:gogossem1,
+    mockup2:gogossem1, 
     type: "Graphic Design Portfolio",
     url: "hello.com",
     git: "github.com",

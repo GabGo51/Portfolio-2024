@@ -11,6 +11,8 @@ const ProjectInfo = ({
   handleReset,
   mainP,
   techP,
+  mockup1,
+  mockup2,
 }) => {
 
   const { cursorChangeHandler } = useContext(MouseContext);
@@ -70,12 +72,12 @@ const ProjectInfo = ({
           <p ref={p1ref}>{mainP}</p>
         </div>
         <div className="black-box">
-          <img />
+          <img alt="website mockup" className="mockup"  src={mockup1}/>
         </div>
       </div>
       <div className="row">
         <div className="red-box">
-          <img />
+        <img alt="website mockup" className="mockup"  src={mockup2}/>
         </div>
         <div className="text2">
           <h4 ref={subHeaderRef}>TechStack</h4>

@@ -34,7 +34,7 @@ const Project = ({
   return (
     <div
       onMouseOver={() => handleMouseOver(projectName)}
-      onMouseEnter={() => cursorChangeHandler("proj")}
+      onMouseEnter={picked ?() => cursorChangeHandler(""):() => cursorChangeHandler("proj")}
       onMouseLeave={() => cursorChangeHandler("")}
       onClick={() => handlePick(projectName)}
       className={getClassName()}

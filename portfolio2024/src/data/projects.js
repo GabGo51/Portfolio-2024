@@ -64,9 +64,9 @@ const projectsData = [
     url: "hello.com",
     git: "https://github.com",
     mainP:
-      "The essence of this contract was to initialize the online presence of a new organisation. The challenging aspect of this project was to recreate an interactive and interesting design using a simple no-code environement since the client wanted to update and edit the website themselves. The functionalities found on this website includes a blog, donations, and a  custom mailing system. The design of the website is based around unortodox color represanting the ground and the sun. We aimed for a stackable pod design",
+      "Image optimization was the challenge of this project. I wanted to keep the best quality possible without having long loading times to showcase Alexandra's work. We went with a simple yet playful design to represent her personality. It was also my first project using custom and animated cursors, which is now a must for all my future projects.",
     techP:
-      "The initial design of this project took place on Figma. Since the client needed a simple and intuitive way to update and edit the website we opted for Squarespace has a no-code environement. I did add a bit off custom Javascipt and CSS to match the wanted design. Donation is made through Zeffy and the mailing system is managed with Squarespace and Google Workplace.",
+      "I initialized the project with React.js. I installed Framer Motion as the animation library and React Marquee to create the image carousel components. The site is deployed on Vercel as a personal project.",
   },
 ];
 

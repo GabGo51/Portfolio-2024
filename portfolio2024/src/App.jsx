@@ -54,7 +54,7 @@ function App() {
     });
 
     const changeStyles = (index) => {
-      const backgroundColors = ["#e5e5e5", "#e5e5e5", "#1d1d1d", "#878787"]; // Define your background colors here
+      const backgroundColors = ["#e5e5e5", "#e5e5e5", "#1d1d1d", "#878787","#e5e5e5"]; // Define your background colors here
       const fontColors = ["#000000", "#000000", "#ffffff", "#ffffff"]; // Define your font colors here
       document.documentElement.style.backgroundColor =
         backgroundColors[index] || "#ffffff";

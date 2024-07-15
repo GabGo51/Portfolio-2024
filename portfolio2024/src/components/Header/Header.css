@@ -31,15 +31,14 @@ li {
 
   p{
     width: 100%;
-    font-weight: 400;
+    font-weight: 500;
   }
 }
 
 li:hover {
+  
   transform: scale(1.1);
-  p{
-    font-weight: 700;
-  }
+  
 }
 
 .menu-toggle {
@@ -50,7 +49,7 @@ li:hover {
   
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   header{
     display: none;
   }

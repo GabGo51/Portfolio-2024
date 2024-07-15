@@ -71,7 +71,7 @@ const ProjectInfo = ({
       <div className="row">
         <div className="text">
           <h3 ref={headerRef}>
-            {projectNumber}
+            {projectNumber} <span> &#183; </span>
             {projectName}
           </h3>
           <p ref={p1ref}>{mainP}</p>

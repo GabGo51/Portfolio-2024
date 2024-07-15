@@ -30,9 +30,13 @@ const Hero = () => {
       })
       .to(".job", {
         height: "40%",
+        width:"100%"
       })
       .from(".job > h1", {
         opacity: 0,
+        y:20,
+        stagger:0.2,
+        delay:0.2
       })
       .from(".blob", {
         opacity: 0,

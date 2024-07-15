@@ -46,7 +46,7 @@
 
   .icon {
     transition: 400ms;
-    width: clamp(20px, 90%, 30px);
+    width: 30px;
     border-radius: 4px;
     margin: 0;
   }
@@ -101,8 +101,7 @@
   }
   .moving-img2 {
     width: 50%;
-    margin-top: -54%;
-    margin-left: -50%;
+    
   }
 
   .text-about {
@@ -114,6 +113,12 @@
 
     h3 {
       margin: 0;
+    }
+  }
+
+  .icon-container{
+    .icon{
+      width: 24px;
     }
   }
 }

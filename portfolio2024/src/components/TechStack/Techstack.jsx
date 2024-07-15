@@ -72,9 +72,9 @@ const Techstack = () => {
       duration: 0.5,
       stagger: 0.3,
     })
-      .to('.tech-hr', {
-        opacity: 1,
-        width: '20%',
+      .from('.tech-hr', {
+        opacity: 0,
+        width: "0%",
         duration: 0.5,
       })
       .to('.tech-icon', {

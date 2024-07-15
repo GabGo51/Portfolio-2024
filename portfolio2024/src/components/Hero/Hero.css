@@ -30,9 +30,6 @@
 }
 
 
-
-
-
 .job{
   position: relative;
   background: linear-gradient(135deg, #4b878a, #1e2d29 33%, #000000 50%, #231e2d 67%, #887caf);
@@ -58,7 +55,12 @@
 }
 
 .phone{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   height: 90vh;
+  width: 90%;
   margin-bottom: 100px;
   .name , .job{
     gap: 20px;
@@ -66,7 +68,26 @@
   }
 
   .job{
-    height: 30%;
+    position: relative;
+    height: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job > :nth-child(1) {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.job > :nth-child(2) {
+  position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+  h1{
+    margin: 0;
   }
 }
 

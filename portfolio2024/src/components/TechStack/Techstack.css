@@ -11,7 +11,6 @@ h2 {
 
 .techstack {
   width: 80vw;
-
   position: relative;
   margin-bottom: 5vw;
 }
@@ -19,21 +18,21 @@ h2 {
 .tech-items {
   display: flex;
   flex-wrap: wrap;
-  font-size: clamp(20px, 3.4vw, 100px);
+  font-size: clamp(18px, 3.4vw, 100px);
 }
 
 .tech-items p {
-  margin: 10px 5px;
+  margin: 6px 4px;
   animation: wave 6s infinite;
 }
 
 .tech-icon {
-  width: clamp(20px, 60%, 50px);
+  width: clamp(30px, 3.4vw, 50px);
 }
 
-hr {
-  opacity: 0;
-  width: 0px;
+.tech-hr {
+  opacity: 1;
+  width: 20%;
   margin: 0 3px;
   transform: translateY(-24px);
 

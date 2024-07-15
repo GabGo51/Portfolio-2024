@@ -1,6 +1,7 @@
 import { useEffect, useContext, useState, useRef } from "react";
 import "../About/About.css";
 import background from "../../img/Others/snowbackground3.png";
+import phoneBackground from "../../img/Others/snowbackground.png";
 import snow from "../../img/Others/snow.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -126,7 +127,7 @@ const About = () => {
           onMouseLeave={() => cursorChangeHandler("")}
         >
           <div ref={podRef1}>
-            <img src={background} />
+            <img src={isDesktop? background : phoneBackground} />
           </div>
           <div className="text-about">
             <h3>Introducing myself</h3>

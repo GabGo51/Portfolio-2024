@@ -9,6 +9,7 @@ const PhoneProjects = () => {
   const [currentProject, setCurrentProject] = useState(0);
   const projectsContainerRef = useRef(null);
   const textRef = useRef(null);
+  const textRef2 = useRef(null);
 
   const handleNext = () => {
     const container = projectsContainerRef.current;
@@ -51,6 +52,18 @@ const PhoneProjects = () => {
         duration: 0.2,
       }
     );
+    gsap.fromTo(
+      textRef2.current,
+      {
+        opacity: 0,
+        y: -20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.2,
+      }
+    );
   };
 
   const animateTextOut = (callback) => {
@@ -64,9 +77,15 @@ const PhoneProjects = () => {
 
   return (
     <div className="phone-wrapper section" id="projects">
-      <h4 ref={textRef}>
-        {projects[currentProject].number} - {projects[currentProject].name}{" "}
-      </h4>
+      <div className="phone-title">
+        <h4 ref={textRef}>
+          {projects[currentProject].number} - {projects[currentProject].name}{" "}
+        </h4>
+        <h4 ref={textRef2}>
+          {projects[currentProject].type} 
+        </h4>
+      </div>
+
       <div className="phone-projects">
         <div className="projects-container" ref={projectsContainerRef}>
           {projects.map((project, index) => (
@@ -75,6 +94,7 @@ const PhoneProjects = () => {
               projectNumber={project.number}
               projectName={project.name}
               imgSrc={project.img}
+              url={project.url}
             />
           ))}
         </div>

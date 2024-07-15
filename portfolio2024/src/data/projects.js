@@ -60,8 +60,8 @@ const projectsData = [
     img: img1,
     mockup1:alexm1,
     mockup2:alexm2, 
-    type: "Graphic Design Portfolio",
-    url: "hello.com",
+    type: "Photography Portfolio",
+    url: "https://www.alexandranicolov.com",
     git: "https://github.com",
     mainP:
       "Image optimization was the challenge of this project. I wanted to keep the best quality possible without having long loading times to showcase Alexandra's work. We went with a simple yet playful design to represent her personality. It was also my first project using custom and animated cursors, which is now a must for all my future projects.",

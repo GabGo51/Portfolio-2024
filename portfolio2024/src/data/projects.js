@@ -44,7 +44,7 @@ const projectsData = [
     number: "03",
     name: "WeFinanceU",
     img: img3,
-    mockup1:wefinanceum1m1,
+    mockup1:wefinanceum1,
     mockup2:wefinanceum2, 
     type: "Real Estate Financing",
     url: "hello.com",

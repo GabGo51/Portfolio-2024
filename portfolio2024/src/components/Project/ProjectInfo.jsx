@@ -49,6 +49,12 @@ const ProjectInfo = ({
       duration: 0.5,
       stagger: 0.1,
     });
+    gsap.to("img", {
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: 0.1,
+    });
   }, []);
 
   const headerRef = useRef(null);

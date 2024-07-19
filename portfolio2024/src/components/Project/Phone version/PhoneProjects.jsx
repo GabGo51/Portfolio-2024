@@ -1,8 +1,11 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import "./PhoneProjects.css";
 import PhoneProject from "./PhoneProject";
 import projectsData from "../../../data/projects";
 import gsap from "gsap";
+import iconleft from "../../../img/Icons/left.png"
+import iconright from "../../../img/Icons/right.png"
+
 
 const PhoneProjects = () => {
   const projects = projectsData;
@@ -81,7 +84,7 @@ const PhoneProjects = () => {
         <h4 ref={textRef}>
           {projects[currentProject].number} - {projects[currentProject].name}{" "}
         </h4>
-        <h4 ref={textRef2}>
+        <h4 className="sub" ref={textRef2}>
           {projects[currentProject].type} 
         </h4>
       </div>
@@ -99,8 +102,8 @@ const PhoneProjects = () => {
           ))}
         </div>
         <div className="arrow-buttons">
-          <button onClick={handlePrevious}>&lt;</button>
-          <button onClick={handleNext}>&gt;</button>
+          <button onClick={handlePrevious}><img className="arrow-icon" src={iconleft} alt="icon"/></button>
+          <button onClick={handleNext}><img className="arrow-icon" src={iconright} alt="icon"/></button>
         </div>
       </div>
     </div>

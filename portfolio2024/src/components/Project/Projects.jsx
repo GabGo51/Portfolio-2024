@@ -109,6 +109,8 @@ const Projects = () => {
     });
   };
 
+  
+
   return (
     <div className="wrapper section" id="projects" ref={containerRef}>
       <div className="projects">

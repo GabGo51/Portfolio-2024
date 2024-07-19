@@ -15,7 +15,7 @@ h4 {
 }
 
 .projects-container {
-  
+  width: 100vw;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -30,12 +30,24 @@ h4 {
 .phone-project {
   flex: 0 0 auto;
   scroll-snap-align: start;
+
+  
 }
 
 .phone-title {
-  width: 100%;
+  width: 104%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  
+  h4{
+    font-size: 20px!important;
+    margin: 15px 0;
+    margin-top: 0;
+  }
+
+  .sub{
+    font-size: 16px!important;
+  }
 }
 .phone-projects {
   display: flex;
@@ -59,7 +71,8 @@ h4 {
 }
 
 .phone-project img {
-  width: 100%;
+  width: 90%;
+  transform: translateX(5%);
   margin-bottom: 30px;
   object-fit: cover;
 }
@@ -67,11 +80,36 @@ h4 {
 .arrow-buttons {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 103%;
 }
 
 .arrow-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid white;
   color: white;
   margin: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+  .arrow-icon{
+    transition: 500ms;
+    filter: invert(100%);
+
+  }
+
+  &:hover{
+    background-color: transparent;
+
+  }
+
+  &:active{
+    border-radius: 5px;
+
+    .arrow-icon{
+      scale: 1.5;
+    }
+  }
 }

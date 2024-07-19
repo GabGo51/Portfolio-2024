@@ -21,6 +21,7 @@ const Project = ({
   mockup2,
   url,
   git,
+  
 }) => {
   const getClassName = () => {
     if (picked === projectName) return "project picked";
@@ -38,6 +39,7 @@ const Project = ({
       onMouseLeave={() => cursorChangeHandler("")}
       onClick={() => handlePick(projectName)}
       className={getClassName()}
+      
     >
       {!picked && hovered !== projectName && (
         <p className="number">{projectNumber}</p>

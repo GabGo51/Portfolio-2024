@@ -74,7 +74,7 @@ const Techstack = () => {
     })
       .to('.tech-hr', {
         opacity: 1,
-        width: "20%",
+        width: 150,
         duration: 0.5,
       })
       .to('.tech-icon', {

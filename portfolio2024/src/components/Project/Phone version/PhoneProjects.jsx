@@ -3,6 +3,7 @@ import "./PhoneProjects.css";
 import PhoneProject from "./PhoneProject";
 import projectsData from "../../../data/projects";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import iconleft from "../../../img/Icons/left.png"
 import iconright from "../../../img/Icons/right.png"
 
@@ -84,17 +85,70 @@ const PhoneProjects = () => {
 
   const handleViewText = () =>{
     if (currentProject === 0 || currentProject === 2 ){
-      return "In Development"
+      return "Still in Development"
     }
     else{
       return "View Site"
     }
   }
 
-  console.log(currentProject);
+  const containerRef = useRef(null)
+
+  useGSAP(() => {
+   
+    gsap.from(".phone-title > *", {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top center",
+        end: "top center",
+        
+      },
+      
+      y: 20,
+      opacity:0,
+      stagger: 0.2,
+    });
+    gsap.from(".projects-container", {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top center",
+        end: "top center",
+        
+      },
+      
+      y: 20,
+      opacity:0,
+      scale:0.6,
+      duration:1,
+      stagger: 0.2,
+    });
+    gsap.from(".arrow-buttons", {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top center",
+        end: "top center",
+        
+      },
+      
+      width:100,
+      duration:1
+    });
+    gsap.from(".view", {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top center",
+        end: "top center",
+        
+      },
+      
+      opacity:0,
+      delay:1
+    });
+  }, []);
+
 
   return (
-    <div className="phone-wrapper section" id="projects">
+    <div className="phone-wrapper section" id="projects" ref={containerRef}>
       <div className="phone-title">
         <h4 ref={textRef}>
           {projects[currentProject].number} - {projects[currentProject].name}{" "}

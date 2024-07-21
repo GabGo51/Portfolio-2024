@@ -8,7 +8,7 @@
 }
 
 .frame {
-  width: 100%;
+  width: 90vw;
   
   scale: 0.8;
   overflow: hidden;
@@ -51,7 +51,7 @@
     width: 30px;
     border-radius: 4px;
     margin: 0;
-    transform: translateX(40%);
+    transform: translateX(32%);
   }
 }
 
@@ -94,21 +94,26 @@
   left: 5%;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .about {
     margin-bottom: 100px;
   }
   .frame {
-    width: 100vw;
+    width: 90%;
     scale: 1;
   }
   .moving-img {
     width: 100vw;
+
+    img{
+      margin: 0;
+      margin-bottom: -40px;
+    }
   }
   .moving-img2 {
     width: 50%;
-    top: 10%;
-    left: 3%;
+    top: 5%;
+    left: 0%;
     
   }
 
@@ -125,8 +130,16 @@
   }
 
   .icon-container{
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.858);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .icon{
       width: 24px;
+      transform: translateX(0%);
+
     }
   }
 }

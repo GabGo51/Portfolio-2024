@@ -1,11 +1,11 @@
-
-
 h2 {
   width: 90%;
   text-align: left;
   transform: translateY(-20px);
+  @media (max-width: 1100px) {
+    margin: 20px 0;
+  }
 }
-
 
 .tech-subtitle {
   margin-right: 30px;
@@ -34,10 +34,9 @@ h2 {
 
 .tech-hr {
   opacity: 0;
-  width: 0%;
-  margin: 0 3px;
-  transform: translateY(-24px);
-
+  width: 0;
+  margin-left: 0;
+  transform: translateY(-10px);
 }
 
 @keyframes wave {

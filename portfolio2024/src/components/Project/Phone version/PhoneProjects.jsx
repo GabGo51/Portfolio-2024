@@ -80,7 +80,13 @@ const PhoneProjects = () => {
   };
 
   const handleViewSite = () => {
-    window.open(projects[currentProject].url, "_blank");
+    
+    if (currentProject === 0 || currentProject === 2 ){
+      return 
+    }
+    else{
+      return window.open(projects[currentProject].url, "_blank");
+    }
   };
 
   const handleViewText = () =>{

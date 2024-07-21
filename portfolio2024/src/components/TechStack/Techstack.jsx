@@ -4,7 +4,7 @@ import Toolbox from "./Toolbox";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-
+import useScreenWidth from "../../hooks/useScreenWidth";
 import icon1 from "../../img/Icons/code.png";
 import icon2 from "../../img/Icons/brush.png";
 
@@ -36,6 +36,8 @@ const techItemsDesign = [
 const Techstack = () => {
   const containerRef = useRef(null);
   const headerRef = useRef(null);
+
+  const isDesktop = useScreenWidth()
   
 
   useGSAP(() => {
@@ -74,7 +76,7 @@ const Techstack = () => {
     })
       .to('.tech-hr', {
         opacity: 1,
-        width: 150,
+        width:isDesktop? "20%": 140,
         duration: 0.5,
       })
       .to('.tech-icon', {

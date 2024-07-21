@@ -48,6 +48,7 @@ function App() {
         trigger: section,
         start: handleAnimationHeight(),
         markers:true,
+        invalidateOnRefresh: true,
 
         onEnter: () => {
           changeStyles(index);

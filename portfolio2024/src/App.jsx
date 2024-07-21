@@ -24,7 +24,7 @@ function App() {
     if(isDesktop){
       return "top center"
     }else{
-      return "top-=100 top"
+      return "top-=250 top"
     }
   }
 

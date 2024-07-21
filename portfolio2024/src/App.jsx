@@ -14,14 +14,25 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Contact from "./components/Contact/Contact";
 
+
 //lenis is simple and fucking goated
 
 function App() {
   const isDesktop = useScreenWidth();
 
+  const handleAnimationHeight = () =>{
+    if(isDesktop){
+      return "top center"
+    }else{
+      return "top top"
+    }
+  }
+
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
   });
+
+  
 
   useEffect(() => {
     if (lenis) {
@@ -35,7 +46,8 @@ function App() {
     sections.forEach((section, index) => {
       ScrollTrigger.create({
         trigger: section,
-        start: "top center",
+        start: handleAnimationHeight(),
+        markers:true,
 
         onEnter: () => {
           changeStyles(index);

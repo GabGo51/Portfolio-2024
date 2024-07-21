@@ -47,7 +47,7 @@ function App() {
       ScrollTrigger.create({
         trigger: section,
         start: handleAnimationHeight(),
-        markers:true,
+        
         
 
         onEnter: () => {

@@ -20,13 +20,7 @@ import Contact from "./components/Contact/Contact";
 function App() {
   const isDesktop = useScreenWidth();
 
-  const handleAnimationHeight = () =>{
-    if(isDesktop){
-      return "top center"
-    }else{
-      return "top-=230 center"
-    }
-  }
+  
 
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
@@ -46,7 +40,8 @@ function App() {
     sections.forEach((section, index) => {
       ScrollTrigger.create({
         trigger: section,
-        start: handleAnimationHeight(),
+        start: isDesktop ? "top center" : "top+=100 center",
+        end: isDesktop ? "bottom top" : "bottom+=100 top",
         
 
         onEnter: () => {

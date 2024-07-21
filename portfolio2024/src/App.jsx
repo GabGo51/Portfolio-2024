@@ -24,7 +24,7 @@ function App() {
     if(isDesktop){
       return "top center"
     }else{
-      return "top-=250 top"
+      return "top-=400 top"
     }
   }
 
@@ -48,7 +48,7 @@ function App() {
         trigger: section,
         start: handleAnimationHeight(),
         markers:true,
-        invalidateOnRefresh: true,
+        
 
         onEnter: () => {
           changeStyles(index);

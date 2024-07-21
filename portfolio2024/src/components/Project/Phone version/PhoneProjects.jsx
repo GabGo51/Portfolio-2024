@@ -78,6 +78,21 @@ const PhoneProjects = () => {
     });
   };
 
+  const handleViewSite = () => {
+    window.open(projects[currentProject].url, "_blank");
+  };
+
+  const handleViewText = () =>{
+    if (currentProject === 0 || currentProject === 2 ){
+      return "In Development"
+    }
+    else{
+      return "View Site"
+    }
+  }
+
+  console.log(currentProject);
+
   return (
     <div className="phone-wrapper section" id="projects">
       <div className="phone-title">
@@ -103,6 +118,7 @@ const PhoneProjects = () => {
         </div>
         <div className="arrow-buttons">
           <button onClick={handlePrevious}><img className="arrow-icon" src={iconleft} alt="icon"/></button>
+          <button className="view" onClick={()=>handleViewSite()}>{handleViewText()}</button>
           <button onClick={handleNext}><img className="arrow-icon" src={iconright} alt="icon"/></button>
         </div>
       </div>

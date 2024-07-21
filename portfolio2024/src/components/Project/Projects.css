@@ -44,7 +44,6 @@
 
 .project {
   position: relative;
-  
   transition: 2s;
   background-color: rgb(255, 255, 255, 0);
   height: 5vh;
@@ -159,7 +158,7 @@
   
 
   p {
-    font-size: 1.4vw;
+    font-size: 2.5vh!important;
     color: var(--charcoal);
   }
 

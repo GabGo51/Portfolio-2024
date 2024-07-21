@@ -25,10 +25,10 @@ const Toolbox = () => {
     t1.to(widthRef.current, { width: "100%", opacity: 1, duration: 0.8 })
       .to(
         heightRef.current,
-        { height: "100%", opacity: 1, duration: 0.8 },
+        { height: "97%", opacity: 1, duration: 0.8 },
         "-=0.5"
       )
-      .to(widthRef.current, { height: "100%", opacity: 1, duration: 0.8 })
+      .to(widthRef.current, { height: "97%", opacity: 1, duration: 0.8 })
       .to(
         heightRef.current,
         { width: "100%", opacity: 1, duration: 0.8 },

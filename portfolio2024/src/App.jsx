@@ -24,7 +24,7 @@ function App() {
     if(isDesktop){
       return "top center"
     }else{
-      return "top-=400 top"
+      return "top-=230 center"
     }
   }
 
@@ -47,7 +47,6 @@ function App() {
       ScrollTrigger.create({
         trigger: section,
         start: handleAnimationHeight(),
-        
         
 
         onEnter: () => {

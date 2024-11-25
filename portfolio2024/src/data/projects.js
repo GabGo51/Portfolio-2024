@@ -19,7 +19,7 @@ const projectsData = [
     mockup1:tatqm1,
     mockup2:tatqm2, 
     type: "Environemental Blog & Research",
-    url: "hello.com",
+    url: "https://www.transitionalimenterre.org",
     git: "https://github.com",
     mainP:
       "In this project I developed the first online presence for Transition Alimenterre Quebec, an organization advocating for a transition to greener food systems. The design was made in collaboration with Nicolas Gosselin (Graphic Designer) The website features their professional researches and blog system to share updates and insights, as well as functionalities for donations and email services to engage with the community and supporters effectively.",

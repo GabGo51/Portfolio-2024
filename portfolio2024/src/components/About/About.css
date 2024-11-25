@@ -9,6 +9,7 @@
 
 .frame {
   width: 90vw;
+  max-width: 1300px;
   
   scale: 0.8;
   overflow: hidden;
@@ -72,7 +73,7 @@
     width: 115%;
     
     margin-left: -20px;
-    margin-bottom: -100px;
+    margin-bottom: -50px;
     margin-top: -20px;
   }
 }
